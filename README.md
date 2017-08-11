@@ -1,1 +1,1 @@
-# JS_group_project
+# js_group_project
