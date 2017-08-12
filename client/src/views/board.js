@@ -3,9 +3,14 @@ var Board = function(canvas) {
   this.squares =[];
   this.onClick = function() {};
 
-  canvas.addEventListener("click", function()  {
-
-  })
+  canvas.addEventListener("click", function(event)  {
+    var x = event.offsetX;
+    var y = event.offsetY;
+    var square = this.getSquareWithin(x,y);
+    if(square !== null) {
+      this.onClick(square);
+    }
+  }.bind(this))
 }
 
 Board.prototype.getSquareWithin = function(x,y){
@@ -14,6 +19,7 @@ Board.prototype.getSquareWithin = function(x,y){
       return square
     }
   }
+  return null;
 }
 
 

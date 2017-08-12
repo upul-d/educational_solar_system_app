@@ -77,7 +77,13 @@ window.addEventListener('load', function() {
   square.drawFill();
   square.drawBorder();
   square.drawImg();
-  console.log(square.isWithin(49, 49));
+  var board = new Board(canvas);
+  board.squares.push(square);
+  var test = board.getSquareWithin(101, 101)
+  console.log(test);
+  board.onClick = function(square) {
+    console.log("yay a square")
+  }
 })
 
 /***/ }),
@@ -89,9 +95,14 @@ var Board = function(canvas) {
   this.squares =[];
   this.onClick = function() {};
 
-  canvas.addEventListener("click", function()  {
-
-  })
+  canvas.addEventListener("click", function(event)  {
+    var x = event.offsetX;
+    var y = event.offsetY;
+    var square = this.getSquareWithin(x,y);
+    if(square !== null) {
+      this.onClick(square);
+    }
+  }.bind(this))
 }
 
 Board.prototype.getSquareWithin = function(x,y){
@@ -100,6 +111,7 @@ Board.prototype.getSquareWithin = function(x,y){
       return square
     }
   }
+  return null;
 }
 
 

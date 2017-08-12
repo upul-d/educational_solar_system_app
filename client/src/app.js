@@ -8,5 +8,11 @@ window.addEventListener('load', function() {
   square.drawFill();
   square.drawBorder();
   square.drawImg();
-  console.log(square.isWithin(49, 49));
+  var board = new Board(canvas);
+  board.squares.push(square);
+  var test = board.getSquareWithin(101, 101)
+  console.log(test);
+  board.onClick = function(square) {
+    console.log("yay a square")
+  }
 })
