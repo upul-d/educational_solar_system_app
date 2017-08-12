@@ -1,0 +1,62 @@
+#container {
+  width: 800px;
+  margin: auto;
+}
+
+nav {
+  background: blue;
+  height: 30px;
+}
+
+#app {
+  background: white;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+#hover-container{
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+
+#hover{
+  background: yellow;
+  height: 20px;
+  text-align: center;
+  margin: 0;
+}
+
+
+.side {
+  background: green;
+  height: 350px;
+  width: 150px;
+}
+
+
+#canvas {
+  background: pink;
+  width: 500px;
+  height: 350px;
+}
+
+#info-container {
+  width: 600px;
+  margin: auto;
+}
+
+#info-nav{
+display: flex;
+}
+
+#info-nav button{
+  text-align: center;
+  background: white;
+  width: 33.3%;
+  border: none;
+}
+
+#info-box {
+  background: cyan;
+  height:20px;
+}
