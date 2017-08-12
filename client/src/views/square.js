@@ -18,7 +18,6 @@ Square.prototype.drawFill = function() {
 Square.prototype.drawBorder = function() {
   this.context.strokeStyle = this.border;
   this.context.strokeRect(this.x, this.y, this.width, this.height);
-
 }
 
 Square.prototype.drawImg = function() {
