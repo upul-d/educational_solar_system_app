@@ -11,6 +11,18 @@ var Board = function(canvas) {
       this.onClick(square);
     }
   }.bind(this))
+
+  this.onHover = function() {};
+
+  canvas.addEventListener("mousemove", function(event)  {
+    var x = event.offsetX;
+    var y = event.offsetY;
+    var square = this.getSquareWithin(x,y);
+    if(square !== null) {
+      this.onHover(square);
+    }
+  }.bind(this))
+
 }
 
 Board.prototype.getSquareWithin = function(x,y){

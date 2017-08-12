@@ -15,4 +15,7 @@ window.addEventListener('load', function() {
   board.onClick = function(square) {
     console.log("yay a square")
   }
+  board.onHover = function(square) {
+    console.log("hovering")
+  }
 })
