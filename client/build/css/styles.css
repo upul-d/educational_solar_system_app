@@ -40,6 +40,12 @@ nav {
   height: 350px;
 }
 
+canvas {
+  background-color: white;
+  width: 500px;
+  height: 350px;
+}
+
 #info-container {
   width: 600px;
   margin: auto;
