@@ -14,5 +14,10 @@ Square.prototype.drawFill = function() {
   this.context.fillRect(this.x, this.y, this.width, this.height);
 }
 
+Square.prototype.drawBorder = function() {
+  this.context.strokeStyle = this.border;
+  this.context.strokeRect(this.x, this.y, this.width, this.height);
+
+}
 
 module.exports = Square;

@@ -76,6 +76,7 @@ window.addEventListener('load', function() {
   var canvas = document.querySelector('#canvas');
   var square = new Square(canvas, 50, 50, 50, 50, 'black', 'red');
   square.drawFill();
+  square.drawBorder();
 })
 
 /***/ }),
@@ -116,6 +117,11 @@ Square.prototype.drawFill = function() {
   this.context.fillRect(this.x, this.y, this.width, this.height);
 }
 
+Square.prototype.drawBorder = function() {
+  this.context.strokeStyle = this.border;
+  this.context.strokeRect(this.x, this.y, this.width, this.height);
+
+}
 
 module.exports = Square;
 
