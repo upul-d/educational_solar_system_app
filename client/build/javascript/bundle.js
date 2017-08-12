@@ -72,12 +72,12 @@ var Square = __webpack_require__(2);
 
 
 window.addEventListener('load', function() {
-  console.log('hello');
   var canvas = document.querySelector('#canvas');
   var square = new Square(canvas, 50, 50, 50, 50, 'black', 'red', "images/sun.png");
   square.drawFill();
   square.drawBorder();
   square.drawImg();
+  console.log(square.isWithin(49, 49));
 })
 
 /***/ }),
@@ -85,9 +85,22 @@ window.addEventListener('load', function() {
 /***/ (function(module, exports) {
 
 var Board = function(canvas) {
+
   this.squares =[];
+  this.onClick = function() {};
+
+  canvas.addEventListener("click", function()  {
+
+  })
 }
 
+Board.prototype.getSquareWithin = function(x,y){
+  for (square of this.squares) {
+    if (square.isWithin(x,y)) {
+      return square
+    }
+  }
+}
 
 
 
@@ -132,6 +145,23 @@ Square.prototype.drawImg = function() {
     this.context.drawImage(this.pic, this.x, this.y, this.width, this.height);
   }.bind(this))
 }
+
+Square.prototype.isWithin = function (x,y) {
+  if(x > this.x && x < this.x + this.width && y > this.y && y < this.y + this.height){
+    return true;
+  }
+  return false;
+}
+
+
+
+
+
+
+
+
+
+
 
 module.exports = Square;
 
