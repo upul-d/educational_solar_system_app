@@ -29,21 +29,15 @@ nav {
 
 .side {
   background: green;
-  height: 350px;
+  height: 500px;
   width: 150px;
 }
 
 
-#canvas {
+#canvas-div {
   background: pink;
   width: 500px;
-  height: 350px;
-}
-
-canvas {
-  background-color: white;
-  width: 500px;
-  height: 350px;
+  height: 500px;
 }
 
 #info-container {

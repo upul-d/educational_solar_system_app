@@ -65,11 +65,59 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+var Board = __webpack_require__(1);
+var Square = __webpack_require__(2);
+
 
 window.addEventListener('load', function() {
   console.log('hello');
+  var canvas = document.querySelector('#canvas');
+  var square = new Square(canvas, 50, 50, 50, 50, 'black', 'red');
+  square.drawFill();
 })
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+var Board = function(canvas) {
+  this.squares =[];
+}
+
+
+
+
+
+
+
+
+
+module.exports = Board
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+var Square = function(canvas, x, y, width, height, border, fill) {
+  this.canvas = canvas;
+  this.context = canvas.getContext("2d");
+  this.x = x;
+  this.y = y;
+  this.width = width;
+  this.height = height;
+  this.border = border;
+  this.fill = fill;
+}
+
+Square.prototype.drawFill = function() {
+  this.context.fillStyle = this.fill;
+  this.context.fillRect(this.x, this.y, this.width, this.height);
+}
+
+
+module.exports = Square;
 
 /***/ })
 /******/ ]);
