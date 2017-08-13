@@ -3,13 +3,14 @@ body {
 }
 
 #container {
-  width: 800px;
+  width: 1100px;
   margin: auto;
 }
 
 nav {
   background: blue;
   height: 30px;
+  opacity: .3;
 }
 
 #app {
@@ -19,8 +20,9 @@ nav {
 }
 
 #hover-container{
-  padding-top: 50px;
+  padding-top: 25px;
   padding-bottom: 10px;
+  opacity: .5;
 }
 
 #hover{
@@ -35,12 +37,13 @@ nav {
   background: green;
   height: 500px;
   width: 150px;
+  opacity: .3;
 }
 
 
 #canvas-div {
   background: transparent;
-  width: 500px;
+  width: 800px;
   height: 500px;
 }
 
