@@ -9,20 +9,20 @@ mongoClient.connect("mongodb://localhost:27017/solarSystem", function(err, db){
     return;
   }
 
-  apiRouter.get("/all", function(req, res) {
-    db.collection("planets").find().toArray(function(err, result) {
+  apiRouter.get("/solar_system", function(req, res) {
+    db.collection("solarSystem").find().toArray(function(err, result) {
       res.json(result[0]);
     });
   });
 
   apiRouter.get("/planets", function(req, res){
-    db.collection("planets").find().toArray(function(err, result){
+    db.collection("solarSystem").find().toArray(function(err, result){
       res.json(result[0].planets);
     });
   });
 
   apiRouter.get("/planets/:id", function(req, res){
-    db.collection("planets").find().toArray(function(err, result){
+    db.collection("solarSystem").find().toArray(function(err, result){
       res.json(result[0].planets[req.params.id]);
     });
   });
