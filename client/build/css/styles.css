@@ -1,3 +1,9 @@
+body {
+  background-image: url("/../images/space_background.gif");
+}
+
+
+
 #container {
   width: 800px;
   margin: auto;
@@ -9,7 +15,7 @@ nav {
 }
 
 #app {
-  background: white;
+  background: transparent;
   display: flex;
   margin-bottom: 30px;
 }
@@ -35,7 +41,7 @@ nav {
 
 
 #canvas-div {
-  background: pink;
+  background: transparent;
   width: 500px;
   height: 500px;
 }
