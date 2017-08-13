@@ -9,6 +9,12 @@ mongoClient.connect("mongodb://localhost:27017/solarSystem", function(err, db){
     return;
   }
 
+  apiRouter.get("/all", function(req, res) {
+    db.collection("planets").find().toArray(function(err, result) {
+      res.json(result[0]);
+    });
+  });
+
   apiRouter.get("/planets", function(req, res){
     db.collection("planets").find().toArray(function(err, result){
       res.json(result[0].planets);
