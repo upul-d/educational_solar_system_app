@@ -1,5 +1,9 @@
-{
- planets:[
+use solarSystem;
+db.dropDatabase();
+
+db.planets.insert({
+
+ "planets":[
   {
     "Name": "Pluto",
 
@@ -85,7 +89,7 @@
 
     "breadCrumbs": [
     {
-      "label": "Solar System",
+      "label": "Solar system",
       "link": "localHost:3000/route-to-solar-system-page"
     },
     ],
@@ -160,4 +164,4 @@
 
     "facts": ["fact 1", "fact 2", "facts 3"]
   }
-  ]}
+  ]});
