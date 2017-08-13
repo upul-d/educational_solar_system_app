@@ -18,9 +18,13 @@ DrawCanvas.prototype.render = function() {
   mercury.img = "images/mercury.png";
   mercury.drawImg();
 
-  var venus = new Square(this.canvas, 90*this.scale, 90*this.scale, 30*this.scale, 30*this.scale, "transparent", "transparent");
+  var venus = new Square(this.canvas, 70*this.scale, 70*this.scale, 30*this.scale, 30*this.scale, "transparent", "transparent");
   venus.img = "images/venus.png";
   venus.drawImg();
+
+  var earth = new Square(this.canvas, 90*this.scale, -90*this.scale, 40*this.scale, 40*this.scale, "transparent", "transparent");
+  earth.img = "images/earth.png";
+  earth.drawImg();
 
 
 
