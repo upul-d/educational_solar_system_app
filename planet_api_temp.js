@@ -3,6 +3,63 @@ db.dropDatabase();
 
 var solarSystem = {};
 
+// SOLAR SYSTEM ------------------------------------------
+
+solarSystem.details = {
+  "Name": "The Solar System",
+
+  "breadCrumbs": [],
+
+  "links": [],
+
+  "mainImage": {
+    "label": "Solar System",
+    "link": "image-link-to-go-here"
+  },
+
+  "sideBar": [
+    {
+      "label": "4.6 Billion Years",
+      "value": "8"
+    },
+    {
+      "label": "Planets",
+      "value": "8"
+    },
+    {
+      "label": "Moons",
+      "value": "181"
+    },
+    {
+      "label": "Radius",
+      "value": "0.95 light years"
+    },
+    {
+      "label": "temperatureCelsius",
+      "value": 167
+    }
+  ],
+
+  "description": [
+  {
+    "type": "paragraph",
+    "title": "info on mercury",
+    "value": "info on mercury"
+  }],
+
+  "gallery": [
+  {
+    "label": "image 1",
+    "lowRes": "link for low-res image",
+    "hiRes": "link for hi-res image"
+  }],
+
+  "facts": ["fact 1", "fact 2", "fact 3"]
+
+}
+
+// SUN ------------------------------------------
+
 var planets = [];
 
 solarSystem.planets = planets;
