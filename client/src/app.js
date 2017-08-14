@@ -4,6 +4,7 @@ var DrawCanvas = require('./views/draw_canvas.js');
 var CanvasHandler = require('./views/canvas_handler.js');
 
 var canvasHandler;
+var drawCanvas;
 
 var makeRequest = function(url, callback) {
   var request = new XMLHttpRequest();
@@ -21,7 +22,7 @@ var requestComplete = function() {
   var jsonString = this.responseText;
   solarSystem = JSON.parse(jsonString);
   // populateScreen(solarSystem.planets[6]);
-  new DrawCanvas(canvasHandler, canvas, solarSystem);
+  drawCanvas = new DrawCanvas(canvasHandler, canvas, solarSystem);
 }
 
 var manageBackgroundCanvas = function(){
@@ -44,9 +45,10 @@ window.addEventListener('load', function() {
   var currentSquare;
   canvasHandler.onClick = function(square){
     if(currentSquare === square) return;
-
-    currentSquare = square;
-    populateScreen(square.data);
+    // 
+    // currentSquare = square;
+    // populateScreen(square.data);
+    drawCanvas.moveToLocation(square);
   }
 
   var hoverName = document.querySelector("#hover");

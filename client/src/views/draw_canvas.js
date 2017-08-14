@@ -2,8 +2,15 @@ var Square = require('./square.js');
 
 var DrawCanvas = function(canvasHandler, canvas, mainObject) {
   this.canvas = canvas;
+
+  this.canvasWidth = canvas.width;
+  this.canvasHeight = canvas.height;
+
   this.canvasHandler = canvasHandler;
   this.context = canvas.getContext("2d");
+
+  this.context.translate(400, 250);
+
   this.scale = 1;
   this.mainObject = mainObject;
   this.render();
@@ -11,13 +18,14 @@ var DrawCanvas = function(canvasHandler, canvas, mainObject) {
 
 DrawCanvas.prototype.makeSquare = function(x, y, width, height){
   var square = new Square(this.canvas, x*this.scale, y*this.scale, width*this.scale, height*this.scale, "transparent", "transparent");
+  console.log("square: ", square);
   this.canvasHandler.squares.push(square);
   return square;
 }
 
 DrawCanvas.prototype.render = function() {
-  this.context.translate(400, 250);
-  // this.context.translate(400+(-90)-20, 250+(90)-20);
+  // this.scale = 10;
+  // this.context.translate(400+(-90*this.scale)-20*this.scale, 250+(90*this.scale)-20*this.scale);
   var sun = this.makeSquare(-55, -55, 110, 110);
   sun.img = "images/sun.png";
   sun.drawImg();
@@ -58,8 +66,25 @@ DrawCanvas.prototype.render = function() {
   var pluto= this.makeSquare(-390, 200, 20, 20);
   pluto.img = "images/pluto.png";
   pluto.drawImg();
+  console.log(this.canvasHandler.squares)
 }
 
+DrawCanvas.prototype.clear = function(){
+    this.canvasHandler.squares = []
+    this.context.clearRect(-this.canvasWidth/2, -this.canvasHeight/2, this.canvasWidth, this.canvasHeight);
+}
+
+DrawCanvas.prototype.moveToLocation = function(square){
+  this.scale = 10;
+  this.clear();
+  // var x = 400 + square.x*this.scale - square.width/2*this.scale
+  // var y = 400 + square.y*this.scale - square.height/2*this.scale
+  // this.context.translate(x, y);
+
+  console.log(square);
+  this.render();
+  this.context.translate(-square.x*this.scale-square.width*this.scale/2, -square.y*this.scale-square.height*this.scale/2);
+}
 
 
 module.exports = DrawCanvas;
