@@ -96,6 +96,11 @@ nav {
 display: flex;
 }
 
+#gallery img{
+  height: 100px;
+  margin: 10px;
+}
+
 #info-nav button{
   text-align: center;
   background: white;
