@@ -31,17 +31,15 @@ nav {
 
 #hover{
   color: white;
-  height: 20px;
-  text-align: center;
   margin: 0;
   display: inline-block;
-  
+  border: 1px solid rgba(255, 255, 255, 0.25);;
+  padding: 5px 20px 5px 20px;
+  background-color: rgba(0, 0, 175, 0.3);
 }
 
-
-
 .side {
-  background-color: rgba(0, 0, 255, 0.1);
+  background-color: rgba(0, 0, 175, 0.3);
   height: 500px;
   width: 150px;
   color: white;
