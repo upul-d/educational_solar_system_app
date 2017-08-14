@@ -13,6 +13,7 @@ var populateRightBar = function(object){
   for(var property of object.sideBar){
     var hr = document.createElement("hr");
     var link = document.createElement("a");
+    link.href = "http://www.google.com";
     var dt = document.createElement("dt");
     dt.innerText = property.label;
     var dd = document.createElement("dd");
@@ -32,6 +33,9 @@ var populateInfoBox = function(object){
   var infoBox = document.querySelector("#info-box");
   var infoContainer = document.querySelector("#info-container");
   infoContainer.removeChild(infoBox);
+  var sectionDiv = document.createElement("section");
+  sectionDiv.id = "info-box";
+
 
   for(var property of object.description){
     var div = document.createElement("div");
@@ -42,8 +46,16 @@ var populateInfoBox = function(object){
 
     div.appendChild(h2);
     div.appendChild(pTag);
-    infoContainer.appendChild(div)
+    sectionDiv.appendChild(div)
+
   }
+    infoContainer.appendChild(sectionDiv);
 }
+
+
+  var populateGallery = function(object) {
+    // var gallery = document.querySelector("#gallery");
+    // var
+  }
 
 module.exports = populateScreen;
