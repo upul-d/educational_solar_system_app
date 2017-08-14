@@ -19,6 +19,8 @@ var requestComplete = function() {
   console.log(solarSystem);
 }
 
+
+
 window.addEventListener('load', function() {
   var canvas = document.querySelector('#canvas');
   new DrawCanvas(canvas);
