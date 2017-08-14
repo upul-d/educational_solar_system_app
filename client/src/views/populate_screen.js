@@ -1,5 +1,6 @@
 var populateScreen = function(object){
   populateRightBar(object);
+  populateInfoBox(object);
 }
 
 
@@ -25,6 +26,24 @@ var populateRightBar = function(object){
   }
 
   rightBar.appendChild(dl2);
+}
+
+var populateInfoBox = function(object){
+  var infoBox = document.querySelector("#info-box");
+  var infoContainer = document.querySelector("#info-container");
+  infoContainer.removeChild(infoBox);
+
+  for(var property of object.description){
+    var div = document.createElement("div");
+    var h2 = document.createElement("h2");
+    h2.innerText = property.title;
+    var pTag = document.createElement("p");
+    pTag.innerText = property.value;
+
+    div.appendChild(h2);
+    div.appendChild(pTag);
+    infoContainer.appendChild(div)
+  }
 }
 
 module.exports = populateScreen;
