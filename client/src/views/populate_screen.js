@@ -3,6 +3,7 @@ var setNavEvents = require('./info_nav_events')
 var populateScreen = function(object){
   populateRightBar(object);
   populateInfoBox(object);
+  populateGallery(object);
   setNavEvents();
 }
 
@@ -32,12 +33,17 @@ var populateRightBar = function(object){
   rightBar.appendChild(dl2);
 }
 
+var addBottomDivClass = function(divToAddTo) {
+  divToAddTo.classList.add('bottom-div');
+}
+
 var populateInfoBox = function(object){
   var infoBox = document.querySelector("#info-box");
   var infoContainer = document.querySelector("#info-container");
   infoContainer.removeChild(infoBox);
   var sectionDiv = document.createElement("section");
   sectionDiv.id = "info-box";
+  addBottomDivClass(sectionDiv);
 
 
   for(var property of object.description){
@@ -57,8 +63,20 @@ var populateInfoBox = function(object){
 
 
   var populateGallery = function(object) {
-    // var gallery = document.querySelector("#gallery");
-    // var
+    var gallery = document.querySelector("#gallery");
+    var infoContainer = document.querySelector('#info-container');
+    infoContainer.removeChild(gallery);
+    var newGalleryDiv = document.createElement('section')
+    newGalleryDiv.id = "gallery";
+    addBottomDivClass(newGalleryDiv);
+
+    for(var property of object.gallery){
+      var image = document.createElement("img");
+      image.src = property.lowRes;
+      newGalleryDiv.appendChild(image);
+      console.log(property.lowRes);
+    }
+    infoContainer.appendChild(newGalleryDiv);
   }
 
 module.exports = populateScreen;

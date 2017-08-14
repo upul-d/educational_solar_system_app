@@ -25,4 +25,13 @@ window.addEventListener('load', function() {
   new DrawCanvas(canvas);
   makeRequest("/solar_system", requestComplete);
   setNavEvents();
+
+  var resizeCanvas = function() {
+    canvasTwo.width = window.innerWidth;
+    canvasTwo.height = window.innerHeight;
+  }
+
+  var canvasTwo = document.querySelector("#canvas-full");
+  window.addEventListener('resize', resizeCanvas);
+  resizeCanvas();
 })
