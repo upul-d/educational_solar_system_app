@@ -18,9 +18,7 @@ var CanvasHandler = function(canvas) {
     var x = event.offsetX - 400;
     var y = event.offsetY - 250;
     var square = this.getSquareWithin(x,y);
-    if(square !== null) {
-      this.onHover(square);
-    }
+    this.onHover(square);
   }.bind(this))
 
 }

@@ -44,9 +44,19 @@ window.addEventListener('load', function() {
   var currentSquare;
   canvasHandler.onClick = function(square){
     if(currentSquare === square) return;
-    
+
     currentSquare = square;
     populateScreen(square.data);
+  }
+
+  var hoverName = document.querySelector("#hover");
+  canvasHandler.onHover = function(square){
+    if(square){
+      hoverName.innerText = square.data.Name;
+    }else{
+      hoverName.innerText = "Solar System";
+    }
+
   }
 
   manageBackgroundCanvas();

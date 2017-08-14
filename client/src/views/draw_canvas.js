@@ -55,7 +55,7 @@ DrawCanvas.prototype.render = function() {
   uranus.drawImg();
   uranus.data = this.mainObject.planets[6]
 
-  var pluto= this.makeSquare(this.canvas, -390, 200, 20, 20);
+  var pluto= this.makeSquare(-390, 200, 20, 20);
   pluto.img = "images/pluto.png";
   pluto.drawImg();
 }
