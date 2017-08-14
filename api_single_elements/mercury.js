@@ -31,18 +31,18 @@ var mercury = {
   "gallery": [
     {
       "label": "image 1",
-      "lowRes": "./images/mercury/mercury1.jpg",
-      "hiRes": "./images/mercury/mercury1.jpg"
+      "lowRes": "./images/mercury/mercury1.png",
+      "hiRes": "./images/mercury/mercury1.png"
     },
     {
       "label": "image 2",
-      "lowRes": "./images/mercury/mercury2.jpg",
-      "hiRes": "./images/mercury/mercury2.jpg"
+      "lowRes": "./images/mercury/mercury2.png",
+      "hiRes": "./images/mercury/mercury2.png"
     },
     {
       "label": "image 3",
-      "lowRes": "./images/mercury/mercury3.jpg",
-      "hiRes": "./images/mercury/mercury3.jpg"
+      "lowRes": "./images/mercury/mercury3.png",
+      "hiRes": "./images/mercury/mercury3.png"
     }
   ],
 

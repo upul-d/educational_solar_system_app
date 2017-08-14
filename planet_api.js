@@ -99,46 +99,52 @@ solarSystem.planets = planets;
 var mercury = {
   "Name": "Mercury",
 
-  "breadCrumbs": [
-  {
-    "label": "Solar System",
-    "link": "localHost:3000/route-to-solar-system-page"
-  }
-  ],
+  "breadCrumbs": [],
 
   "links": [],
 
-  "mainImage": {
-    "label": "Mercury",
-    "link": "image-link-to-go-here"
-  },
+  "mainImage": {},
 
   "sideBar": [
-  {
-    "label": "Radius",
-    "value": "2439.7" + "km"
-  },
-  {
-    "label": "temperatureCelsius",
-    "value": 167
-  }],
+    {
+      "label": "Length Of A Day",
+      "value": "58 days"
+    },
+    {
+      "label": "Average Temperature In Celsius",
+      "value": -167
+    },
+    {
+      "label": "Distance From The Sun",
+      "value": "57.91 million km"
+    }
+  ],
 
   "description": [
   {
-    "type": "paragraph",
-    "title": "info on mercury",
-    "value": "info on mercury"
+    "title": "Mercury",
+    "value": "Mercury is the smallest and innermost planet in the Solar System. Its orbital period around the Sun of 88 days is the shortest of all the planets in the Solar System. It is named after the Roman deity Mercury, the messenger to the gods. Like Venus, Mercury orbits the Sun within Earth's orbit as an inferior planet, so it can only be seen visually in the morning or the evening sky, and never exceeds 28° away from the Sun. Also, like Venus and the Moon, the planet displays the complete range of phases as it moves around its orbit relative to Earth. Seen from Earth, this cycle of phases reoccurs approximately every 116 days, the so-called synodic period. Although Mercury can appear as a bright star-like object when viewed from Earth, its proximity to the Sun often makes it more difficult to see than Venus."
   }],
 
   "gallery": [
-  {
-    "label": "image 1",
-    "lowRes": "link for low-res image",
-    "hiRes": "link for hi-res image"
-  }],
+    {
+      "label": "image 1",
+      "lowRes": "./images/mercury/mercury1.png",
+      "hiRes": "./images/mercury/mercury1.png"
+    },
+    {
+      "label": "image 2",
+      "lowRes": "./images/mercury/mercury2.png",
+      "hiRes": "./images/mercury/mercury2.png"
+    },
+    {
+      "label": "image 3",
+      "lowRes": "./images/mercury/mercury3.png",
+      "hiRes": "./images/mercury/mercury3.png"
+    }
+  ],
 
   "facts": ["fact 1", "fact 2", "fact 3"]
-
 }
 
 var venus = {
@@ -393,19 +399,11 @@ var saturn = {
 var uranus = {
   "Name": "Uranus",
 
-  "breadCrumbs": [
-    {
-      "label": "Solar System",
-      "link": "localHost:3000/route-to-solar-system-page"
-    }
-  ],
+  "breadCrumbs": [],
 
   "links": [],
 
-  "mainImage": {
-    "label": "Uranus",
-    "link": "image-link-to-go-here"
-  },
+  "mainImage": {},
 
   "sideBar": [
     {
@@ -424,18 +422,7 @@ var uranus = {
 
   "description": [
   {
-    "type": "paragraph",
-    "title": "info on Uranus",
-    "value": "Uranus is the seventh planet from the Sun. It has the third-largest planetary radius and fourth-largest planetary mass in the Solar System. Uranus is similar in composition to Neptune, and both have different bulk chemical composition from that of the larger gas giants Jupiter and Saturn. For this reason, scientists often classify Uranus and Neptune as 'ice giants' to distinguish them from the gas giants. Uranus's atmosphere is similar to Jupiter's and Saturn's in its primary composition of hydrogen and helium, but it contains more 'ices' such as water, ammonia, and methane, along with traces of other hydrocarbons. It is the coldest planetary atmosphere in the Solar System, with a minimum temperature of 49 K (−224 °C; −371 °F), and has a complex, layered cloud structure with water thought to make up the lowest clouds and methane the uppermost layer of clouds. The interior of Uranus is mainly composed of ices and rock."
-  },
-  {
-    "type": "paragraph",
-    "title": "info on Uranus",
-    "value": "Uranus is the seventh planet from the Sun. It has the third-largest planetary radius and fourth-largest planetary mass in the Solar System. Uranus is similar in composition to Neptune, and both have different bulk chemical composition from that of the larger gas giants Jupiter and Saturn. For this reason, scientists often classify Uranus and Neptune as 'ice giants' to distinguish them from the gas giants. Uranus's atmosphere is similar to Jupiter's and Saturn's in its primary composition of hydrogen and helium, but it contains more 'ices' such as water, ammonia, and methane, along with traces of other hydrocarbons. It is the coldest planetary atmosphere in the Solar System, with a minimum temperature of 49 K (−224 °C; −371 °F), and has a complex, layered cloud structure with water thought to make up the lowest clouds and methane the uppermost layer of clouds. The interior of Uranus is mainly composed of ices and rock."
-  },
-  {
-    "type": "paragraph",
-    "title": "info on Uranus",
+    "title": "Uranus",
     "value": "Uranus is the seventh planet from the Sun. It has the third-largest planetary radius and fourth-largest planetary mass in the Solar System. Uranus is similar in composition to Neptune, and both have different bulk chemical composition from that of the larger gas giants Jupiter and Saturn. For this reason, scientists often classify Uranus and Neptune as 'ice giants' to distinguish them from the gas giants. Uranus's atmosphere is similar to Jupiter's and Saturn's in its primary composition of hydrogen and helium, but it contains more 'ices' such as water, ammonia, and methane, along with traces of other hydrocarbons. It is the coldest planetary atmosphere in the Solar System, with a minimum temperature of 49 K (−224 °C; −371 °F), and has a complex, layered cloud structure with water thought to make up the lowest clouds and methane the uppermost layer of clouds. The interior of Uranus is mainly composed of ices and rock."
   }],
 
@@ -454,7 +441,58 @@ var uranus = {
       "label": "image 3",
       "lowRes": "./images/uranus/uranus3.jpg",
       "hiRes": "./images/uranus/uranus3.jpg"
+    }
+  ],
+
+  "facts": ["fact 1", "fact 2", "fact 3"]
+}
+
+var neptune = {
+  "Name": "Neptune",
+
+  "breadCrumbs": [],
+
+  "links": [],
+
+  "mainImage": {},
+
+  "sideBar": [
+    {
+      "label": "Length Of A Day",
+      "value": "16h"
     },
+    {
+      "label": "Average Temperature In Celsius",
+      "value": -214
+    },
+    {
+      "label": "Distance From The Sun",
+      "value": "4.498 billion km"
+    }
+  ],
+
+  "description": [
+  {
+    "title": "Neptune",
+    "value": "Neptune is the eighth and farthest known planet from the Sun in the Solar System. In the Solar System, it is the fourth-largest planet by diameter, the third-most-massive planet, and the densest giant planet. Neptune is 17 times the mass of Earth and is slightly more massive than its near-twin Uranus, which is 15 times the mass of Earth and slightly larger than Neptune.[d] Neptune orbits the Sun once every 164.8 years at an average distance of 30.1 astronomical units (4.50×109 km). It is named after the Roman god of the sea and has the astronomical symbol ♆, a stylised version of the god Neptune's trident."
+  }],
+
+  "gallery": [
+    {
+      "label": "image 1",
+      "lowRes": "./images/neptune/neptune1.png",
+      "hiRes": "./images/neptune/neptune1.png"
+    },
+    {
+      "label": "image 2",
+      "lowRes": "./images/neptune/neptune2.jpeg",
+      "hiRes": "./images/neptune/neptune2.jpeg"
+    },
+    {
+      "label": "image 3",
+      "lowRes": "./images/neptune/neptune3.png",
+      "hiRes": "./images/neptune/neptune3.png"
+    }
   ],
 
   "facts": ["fact 1", "fact 2", "fact 3"]
@@ -463,71 +501,49 @@ var uranus = {
 var pluto = {
   "Name": "Pluto",
 
-  "breadCrumbs": [
-    {
-      "label": "Solar System",
-      "link": "localHost:3000/route-to-solar-system-page"
-    }
-  ],
+  "breadCrumbs": [],
 
-  "links":[
-    {
-      "label": "Styx (moon)",
-      "link": "localHost:3000/route-to-request-styx",
-    },
-    {
-      "label": "Kerberos (moon)",
-      "link": "localHost:3000/route-to-request-kerberos",
-    },
-  ],
+  "links":[],
 
-  "mainImage": {
-    "label": "Pluto",
-    "link": "image-link-to-go-here"
-  },
+  "mainImage": {},
 
   "sideBar": [
     {
-      "label": "Length Of Day",
+      "label": "Length Of A Day",
       "value": "6.4 Earth days",
     },
     {
-      "label": "Radius",
-      "value": "1,187 km",
+      "label": "Average Temperature In Celsius",
+      "value": -229,
     },
     {
-      "label": "Average Distance From The Sun",
+      "label": "Distance From The Sun",
       "value": "5.9 billion km",
-    },
-    {
-      "label": "Average Distance From The Earth",
-      "value": "7.5 billion km",
-    },
+    }
   ],
 
   "description": [
     {
-      "type": "paragraph",
-      "title": "Styx",
-      "value": "Nix is a natural satellite of Pluto. It was discovered along with Hydra (Pluto's outermost satellite) in June 2005. It was imaged along with Pluto and its other moons by the New Horizons spacecraft as it flew by the Pluto system in July 2015. Of the four small Plutonian moons the best pictures are of Nix, with resolutions as high as 330 meters per pixel. The formal name 'Nix', from the Greek goddess of darkness and night and mother of Charon (ferryman of Hades), was announced on 21 June 2006 on IAU Circular 8723, where the designation Pluto II is also given. Nix follows a circular orbit in the same plane as Charon. It is in a 3:2 orbital resonance with Hydra, and a 9:11 resonance with Styx (the ratios represent numbers of orbits completed per unit time; the period ratios are the inverses). As a result of this 'Laplace-like' 3-body resonance, it has conjunctions with Styx and Hydra in a 2:3 ratio."
+      "title": "Pluto",
+      "value": "Pluto (minor-planet designation: 134340 Pluto) is a dwarf planet in the Kuiper belt, a ring of bodies beyond Neptune. It was the first Kuiper belt object to be discovered. Pluto was discovered by Clyde Tombaugh in 1930 and was originally considered to be the ninth planet from the Sun. After 1992, its status as a planet was questioned following the discovery of several objects of similar size in the Kuiper belt. In 2005, Eris, a dwarf planet in the scattered disc which is 27% more massive than Pluto, was discovered. This led the International Astronomical Union (IAU) to define the term 'planet' formally in 2006, during their 26th General Assembly. That definition excluded Pluto and reclassified it as a dwarf planet. "
     },
   ],
 
   "gallery": [
     {
       "label": "image 1",
-      "lowRes": "images/pluto1.jpg",
-      "highRes": "images/pluto1.jpg"
+      "lowRes": "./images/pluto/pluto1.jpg",
+      "highRes": "./images/pluto/pluto1.jpg"
     },
     {
       "label": "image 2",
-      "lowRes": "images/pluto2.png",
-      "highRes": "images/pluto2.png"
+      "lowRes": "./images/pluto/pluto2.png",
+      "highRes": "./images/pluto/pluto2.png"
     },
     {
       "label": "image 3",
-      "lowRes": "images/pluto3.jpg",
-      "highRes": "images/pluto3.jpg"
+      "lowRes": "./images/pluto/pluto3.jpg",
+      "highRes": "./images/pluto/pluto3.jpg"
     }
   ],
 
@@ -776,13 +792,13 @@ planets.push(mars);
 planets.push(jupiter);
 
 planets.push(saturn);
-saturn.moons.push(hyperion);
 
 planets.push(uranus);
 uranus.moons.push(ariel);
 
+planets.push(neptune);
 planets.push(pluto);
-pluto.moons.push(kerberos);
+
 
 db.solarSystem.insert(solarSystem);
 

@@ -36,13 +36,13 @@ var uranus = {
     },
     {
       "label": "image 2",
-      "lowRes": "./images/uranus/uranus2.png",
-      "hiRes": "./images/uranus/uranus2.png"
+      "lowRes": "./images/uranus/uranus2.jpg",
+      "hiRes": "./images/uranus/uranus2.jpg"
     },
     {
       "label": "image 3",
-      "lowRes": "./images/uranus/uranus3.png",
-      "hiRes": "./images/uranus/uranus3.png"
+      "lowRes": "./images/uranus/uranus3.jpg",
+      "hiRes": "./images/uranus/uranus3.jpg"
     }
   ],
 

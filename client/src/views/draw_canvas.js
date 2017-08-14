@@ -57,18 +57,24 @@ DrawCanvas.prototype.render = function() {
   saturn.drawImg();
   saturn.data = this.mainObject.planets[5];
 
-  var neptune = this.makeSquare(-350, -75, 45, 45);
-  neptune.img = "images/neptune.png";
-  neptune.drawImg();
 
   var uranus = this.makeSquare(320, -200, 45, 45);
   uranus.img = "images/uranus.png";
   uranus.drawImg();
   uranus.data = this.mainObject.planets[6]
 
+
+  var neptune = this.makeSquare(-350, -75, 45, 45);
+  neptune.img = "images/neptune.png";
+  neptune.drawImg();
+  neptune.data = this.mainObject.planets[7];
+
+
+
   var pluto= this.makeSquare(-390, 200, 20, 20);
   pluto.img = "images/pluto.png";
   pluto.drawImg();
+  pluto.data = this.mainObject.planets[8];
 }
 
 DrawCanvas.prototype.clear = function(){
