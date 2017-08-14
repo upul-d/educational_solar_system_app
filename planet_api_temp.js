@@ -148,6 +148,57 @@ var earth = {
   "facts": ["fact 1", "fact 2", "fact 3"]
 }
 
+var jupiter = {
+  "Name": "Jupiter",
+
+  "breadCrumbs": [
+    {
+      "label": "Solar System",
+      "link": "localHost:3000/route-to-solar-system-page"
+    }
+  ],
+
+  "links": [],
+
+  "mainImage": {
+    "label": "Jupiter",
+    "link": "image-link-to-go-here"
+  },
+
+  "sideBar": [
+    {
+      "label": "Length Of A Day",
+      "value": "9.9 hours"
+    },
+    {
+      "label": "Average Temperature In Celsius",
+      "value": -161
+    },
+    {
+      "label": "Distance From The Sun",
+      "value": "1.429 billion km"
+    }
+  ],
+
+  "description": [
+  {
+    "type": "paragraph",
+    "title": "info on Jupiter",
+    "value": "Jupiter is the largest planet in the solar system. It is approximately 143,000 kilometers (about 89,000 miles) wide at its equator. Jupiter is so large that all of the other planets in the solar system could fit inside it. More than 1,300 Earths would fit inside Jupiter. Jupiter is like a star in composition. If Jupiter had been about 80 times more massive, it would have become a star rather than a planet. Jupiter is the fifth planet from the sun. Jupiter's average distance from the sun is 5.2 astronomical units, or AU. This distance is a little more than five times the distance from Earth to the sun. When viewed from Earth, Jupiter is usually the second brightest planet in the night sky, after Venus. The planet is named after Jupiter, the king of the Roman gods in mythology.",
+
+  }],
+
+  "gallery": [
+    {
+      "label": "image 1",
+      "lowRes": "link for low-res image",
+      "hiRes": "link for hi-res image"
+    }
+  ],
+
+  "facts": ["fact 1", "fact 2", "fact 3"]
+}
+
 var saturn = {
   "Name": "Saturn",
 
@@ -448,6 +499,8 @@ var kerberos = {
   "facts": ["fact 1", "fact 2", "fact 3"]
 }
 
+// PUSHING TO ARRAYS ------------------------------------------
+
 planets.push(mercury);
 
 planets.push(venus);
@@ -463,3 +516,5 @@ planets.push(pluto);
 pluto.moons.push(kerberos);
 
 db.solarSystem.insert(solarSystem);
+
+db.solarSystem.find();
