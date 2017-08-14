@@ -44,6 +44,17 @@ nav {
   padding-left: 5px;
   padding-right: 5px;
 }
+
+#left-side{
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#left-side label{
+  margin-top: 15px;
+  display: block;
+}
+
 #right-side dl {
   margin-top: 5px;
 }
