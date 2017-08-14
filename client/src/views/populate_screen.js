@@ -1,6 +1,9 @@
+var setNavEvents = require('./info_nav_events')
+
 var populateScreen = function(object){
   populateRightBar(object);
   populateInfoBox(object);
+  setNavEvents();
 }
 
 

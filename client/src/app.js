@@ -17,7 +17,7 @@ var requestComplete = function() {
 
   var jsonString = this.responseText;
   solarSystem = JSON.parse(jsonString);
-  populateScreen(solarSystem.planets[0]);
+  populateScreen(solarSystem.planets[6]);
 }
 
 window.addEventListener('load', function() {
