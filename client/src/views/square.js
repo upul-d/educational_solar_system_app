@@ -8,7 +8,7 @@ var Square = function(canvas, x, y, width, height, border, fill, img) {
   this.border = border;
   this.fill = fill;
   this.img = img;
-} 
+}
 
 Square.prototype.drawFill = function() {
   this.context.fillStyle = this.fill;
@@ -34,15 +34,5 @@ Square.prototype.isWithin = function (x,y) {
   }
   return false;
 }
-
-
-
-
-
-
-
-
-
-
 
 module.exports = Square;
