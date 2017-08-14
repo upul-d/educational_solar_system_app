@@ -4,6 +4,7 @@ var populateScreen = function(object){
   populateRightBar(object);
   populateInfoBox(object);
   populateGallery(object);
+  populateFunFacts(object);
   setNavEvents();
 }
 
@@ -61,22 +62,46 @@ var populateInfoBox = function(object){
     infoContainer.appendChild(sectionDiv);
 }
 
+var populateGallery = function(object) {
+  var gallery = document.querySelector("#gallery");
+  var infoContainer = document.querySelector('#info-container');
+  infoContainer.removeChild(gallery);
+  var newGalleryDiv = document.createElement('section')
+  newGalleryDiv.id = "gallery";
+  addBottomDivClass(newGalleryDiv);
 
-  var populateGallery = function(object) {
-    var gallery = document.querySelector("#gallery");
-    var infoContainer = document.querySelector('#info-container');
-    infoContainer.removeChild(gallery);
-    var newGalleryDiv = document.createElement('section')
-    newGalleryDiv.id = "gallery";
-    addBottomDivClass(newGalleryDiv);
-
-    for(var property of object.gallery){
-      var image = document.createElement("img");
-      image.src = property.lowRes;
-      newGalleryDiv.appendChild(image);
-      console.log(property.lowRes);
-    }
-    infoContainer.appendChild(newGalleryDiv);
+  for(var property of object.gallery){
+    var image = document.createElement("img");
+    image.src = property.lowRes;
+    newGalleryDiv.appendChild(image);
   }
+  infoContainer.appendChild(newGalleryDiv);
+}
+
+var populateFunFacts = function(object){
+  var infoContainer = document.querySelector('#info-container');
+  var funFactsSection = document.querySelector('#fun-facts');
+  infoContainer.removeChild(funFactsSection);
+  var newFunFacts = document.createElement("section");
+  newFunFacts.id = "fun-facts";
+  addBottomDivClass(newFunFacts);
+
+  var div = document.createElement("div");
+  var h2 = document.createElement("h2");
+  h2.innerText = "Fun Facts";
+  var ul = document.createElement("ul");
+
+  for(var property of object.facts){
+    var li = document.createElement("li");
+    li.innerText = property;
+    ul.appendChild(li);
+  }
+
+  div.appendChild(h2);
+  div.appendChild(ul);
+  newFunFacts.appendChild(div);
+
+  infoContainer.appendChild(newFunFacts);
+}
 
 module.exports = populateScreen;
