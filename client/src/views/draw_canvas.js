@@ -32,10 +32,12 @@ DrawCanvas.prototype.render = function() {
   var mercury = this.makeSquare(-65, 65, 20, 20);
   mercury.img = "images/mercury.png";
   mercury.drawImg();
+  mercury.data = this.mainObject.planets[0];
 
   var venus = this.makeSquare(70, 70, 30, 30);
   venus.img = "images/venus.png";
   venus.drawImg();
+  venus.data = this.mainObject.planets[1];
 
   var earth = this.makeSquare(90, -90, 40, 40);
   earth.img = "images/earth.png";

@@ -31,18 +31,18 @@ var venus = {
   "gallery": [
     {
       "label": "image 1",
-      "lowRes": "./images/venus/venus1.jpg",
-      "hiRes": "./images/venus/venus1.jpg"
+      "lowRes": "./images/venus/venus1.png",
+      "hiRes": "./images/venus/venus1.png"
     },
     {
       "label": "image 2",
-      "lowRes": "./images/venus/venus2.jpg",
-      "hiRes": "./images/venus/venus2.jpg"
+      "lowRes": "./images/venus/venus2.png",
+      "hiRes": "./images/venus/venus2.png"
     },
     {
       "label": "image 3",
-      "lowRes": "./images/venus/venus3.jpg",
-      "hiRes": "./images/venus/venus3.jpg"
+      "lowRes": "./images/venus/venus3.png",
+      "hiRes": "./images/venus/venus3.png"
     }
   ],
 
