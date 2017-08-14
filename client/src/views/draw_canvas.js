@@ -2,13 +2,16 @@ var Square = require('./square.js');
 
 var DrawCanvas = function(canvasHandler, canvas) {
   this.canvas = canvas;
+  this.canvasHandler = canvasHandler;
   this.context = canvas.getContext("2d");
   this.scale = 1;
   this.render();
 }
 
 DrawCanvas.prototype.makeSquare = function(x, y, width, height){
-  return new Square(this.canvas, x*this.scale, y*this.scale, width*this.scale, height*this.scale, "transparent", "transparent");
+  var square = new Square(this.canvas, x*this.scale, y*this.scale, width*this.scale, height*this.scale, "transparent", "transparent");
+  this.canvasHandler.squares.push(square);
+  return square;
 }
 
 DrawCanvas.prototype.render = function() {

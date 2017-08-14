@@ -3,9 +3,9 @@ var CanvasHandler = function(canvas) {
   this.squares =[];
   this.onClick = function() {};
 
-  canvas.addEventListener("click", function(event)  {
-    var x = event.offsetX;
-    var y = event.offsetY;
+  canvas.addEventListener("click", function(event) {
+    var x = event.offsetX - 400;
+    var y = event.offsetY - 250;
     var square = this.getSquareWithin(x,y);
     if(square !== null) {
       this.onClick(square);
@@ -14,9 +14,9 @@ var CanvasHandler = function(canvas) {
 
   this.onHover = function() {};
 
-  canvas.addEventListener("mousemove", function(event)  {
-    var x = event.offsetX;
-    var y = event.offsetY;
+  canvas.addEventListener("mousemove", function(event) {
+    var x = event.offsetX - 400;
+    var y = event.offsetY - 250;
     var square = this.getSquareWithin(x,y);
     if(square !== null) {
       this.onHover(square);

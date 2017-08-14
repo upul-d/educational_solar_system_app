@@ -39,5 +39,9 @@ window.addEventListener('load', function() {
   makeRequest("/solar_system", requestComplete);
   setNavEvents();
 
+  canvasHandler.onClick = function(square){
+    console.log("click");
+  }
+
   manageBackgroundCanvas();
 })
