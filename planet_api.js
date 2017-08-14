@@ -16,7 +16,7 @@ var mercury = {
     "link": "localHost:3000/route-to-solar-system-page"
   }
   ],
-  
+
   "links": [],
 
   "mainImage": {
@@ -62,7 +62,7 @@ var venus = {
     "link": "localHost:3000/route-to-solar-system-page"
   }
   ],
-  
+
   "links": [],
 
   "mainImage": {
@@ -107,7 +107,7 @@ var earth = {
     "link": "localHost:3000/route-to-solar-system-page"
   }
   ],
-  
+
   "links": [
     {
       "label": "Moon",
@@ -146,7 +146,6 @@ var earth = {
   }],
 
   "facts": ["fact 1", "fact 2", "fact 3"]
-
 }
 
 planets.push(mercury);
