@@ -1,6 +1,7 @@
 var populateScreen = require("./views/populate_screen.js");
 var setNavEvents = require('./views/info_nav_events.js');
 var DrawCanvas = require('./views/draw_canvas.js');
+var CanvasHandler = require('./views/canvas_handler.js');
 
 var makeRequest = function(url, callback) {
   var request = new XMLHttpRequest();
@@ -20,12 +21,7 @@ var requestComplete = function() {
   populateScreen(solarSystem.planets[6]);
 }
 
-window.addEventListener('load', function() {
-  var canvas = document.querySelector('#canvas');
-  new DrawCanvas(canvas);
-  makeRequest("/solar_system", requestComplete);
-  setNavEvents();
-
+var manageBackgroundCanvas = function(){
   var resizeCanvas = function() {
     canvasTwo.width = window.innerWidth;
     canvasTwo.height = window.innerHeight;
@@ -34,4 +30,14 @@ window.addEventListener('load', function() {
   var canvasTwo = document.querySelector("#canvas-full");
   window.addEventListener('resize', resizeCanvas);
   resizeCanvas();
+}
+
+window.addEventListener('load', function() {
+  var canvas = document.querySelector('#canvas');
+  var canvasHandler = new CanvasHandler(canvas);
+  new DrawCanvas(canvasHandler, canvas);
+  makeRequest("/solar_system", requestComplete);
+  setNavEvents();
+
+  manageBackgroundCanvas();
 })

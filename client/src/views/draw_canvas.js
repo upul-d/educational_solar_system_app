@@ -1,7 +1,6 @@
-var Board = require('./board.js');
 var Square = require('./square.js');
 
-var DrawCanvas = function(canvas) {
+var DrawCanvas = function(canvasHandler, canvas) {
   this.canvas = canvas;
   this.context = canvas.getContext("2d");
   this.scale = 1;

@@ -1,4 +1,4 @@
-var Board = function(canvas) {
+var CanvasHandler = function(canvas) {
 
   this.squares =[];
   this.onClick = function() {};
@@ -25,7 +25,7 @@ var Board = function(canvas) {
 
 }
 
-Board.prototype.getSquareWithin = function(x,y){
+CanvasHandler.prototype.getSquareWithin = function(x,y){
   for (square of this.squares) {
     if (square.isWithin(x,y)) {
       return square
@@ -41,4 +41,4 @@ Board.prototype.getSquareWithin = function(x,y){
 
 
 
-module.exports = Board
+module.exports = CanvasHandler
