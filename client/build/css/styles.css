@@ -85,9 +85,10 @@ nav {
 }
 
 #info-container {
-  width: 600px;
+  width: 630px;
   margin: auto;
   color: white;
+  background-color: rgba(0,0,0,0.75);
 }
 
 #info-box h2 {
@@ -108,4 +109,8 @@ display: flex;
   background: white;
   width: 33.3%;
   border: none;
+}
+
+.bottom-div{
+  padding: 0 20px 0 20px;
 }
