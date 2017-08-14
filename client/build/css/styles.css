@@ -26,18 +26,22 @@ nav {
 #hover-container{
   padding-top: 25px;
   padding-bottom: 10px;
+  text-align: center;
 }
 
 #hover{
-  background: yellow;
+  color: white;
   height: 20px;
   text-align: center;
   margin: 0;
+  display: inline-block;
+  
 }
 
 
+
 .side {
-  background-color: rgba(0, 0, 255, 0.5);
+  background-color: rgba(0, 0, 255, 0.1);
   height: 500px;
   width: 150px;
   color: white;
