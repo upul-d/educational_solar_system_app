@@ -1,10 +1,11 @@
 var Square = require('./square.js');
 
-var DrawCanvas = function(canvasHandler, canvas) {
+var DrawCanvas = function(canvasHandler, canvas, mainObject) {
   this.canvas = canvas;
   this.canvasHandler = canvasHandler;
   this.context = canvas.getContext("2d");
   this.scale = 1;
+  this.mainObject = mainObject;
   this.render();
 }
 
@@ -49,9 +50,10 @@ DrawCanvas.prototype.render = function() {
   neptune.img = "images/neptune.png";
   neptune.drawImg();
 
-  var uranus = new Square(this.canvas, 320*this.scale, -200*this.scale, 45*this.scale, 45*this.scale, "transparent", "transparent");
+  var uranus = this.makeSquare(320, -200, 45, 45);
   uranus.img = "images/uranus.png";
   uranus.drawImg();
+  uranus.data = this.mainObject.planets[6]
 
   var pluto= new Square(this.canvas, -390*this.scale, 200*this.scale, 20*this.scale, 20*this.scale, "transparent", "transparent");
   pluto.img = "images/pluto.png";

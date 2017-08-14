@@ -3,6 +3,8 @@ var setNavEvents = require('./views/info_nav_events.js');
 var DrawCanvas = require('./views/draw_canvas.js');
 var CanvasHandler = require('./views/canvas_handler.js');
 
+var canvasHandler;
+
 var makeRequest = function(url, callback) {
   var request = new XMLHttpRequest();
   request.open("GET", url);
@@ -19,6 +21,7 @@ var requestComplete = function() {
   var jsonString = this.responseText;
   solarSystem = JSON.parse(jsonString);
   populateScreen(solarSystem.planets[6]);
+  new DrawCanvas(canvasHandler, canvas, solarSystem);
 }
 
 var manageBackgroundCanvas = function(){
@@ -34,13 +37,12 @@ var manageBackgroundCanvas = function(){
 
 window.addEventListener('load', function() {
   var canvas = document.querySelector('#canvas');
-  var canvasHandler = new CanvasHandler(canvas);
-  new DrawCanvas(canvasHandler, canvas);
   makeRequest("/solar_system", requestComplete);
+  canvasHandler = new CanvasHandler(canvas)
   setNavEvents();
 
   canvasHandler.onClick = function(square){
-    console.log("click");
+    console.log(square.data);
   }
 
   manageBackgroundCanvas();
