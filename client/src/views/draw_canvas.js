@@ -17,36 +17,36 @@ DrawCanvas.prototype.makeSquare = function(x, y, width, height){
 
 DrawCanvas.prototype.render = function() {
   this.context.translate(400, 250);
-  // this.context.translate(400+(-90*this.scale)-20*this.scale, 250+(90*this.scale)-20*this.scale);
+  // this.context.translate(400+(-90)-20, 250+(90)-20);
   var sun = this.makeSquare(-55, -55, 110, 110);
   sun.img = "images/sun.png";
   sun.drawImg();
 
-  var mercury = new Square(this.canvas, -65*this.scale, 65*this.scale, 20*this.scale, 20*this.scale, "transparent", "transparent");
+  var mercury = this.makeSquare(-65, 65, 20, 20);
   mercury.img = "images/mercury.png";
   mercury.drawImg();
 
-  var venus = new Square(this.canvas, 70*this.scale, 70*this.scale, 30*this.scale, 30*this.scale, "transparent", "transparent");
+  var venus = this.makeSquare(70, 70, 30, 30);
   venus.img = "images/venus.png";
   venus.drawImg();
 
-  var earth = new Square(this.canvas, 90*this.scale, -90*this.scale, 40*this.scale, 40*this.scale, "transparent", "transparent");
+  var earth = this.makeSquare(90, -90, 40, 40);
   earth.img = "images/earth.png";
   earth.drawImg();
 
-  var mars = new Square(this.canvas, -100*this.scale, -100*this.scale, 30*this.scale, 30*this.scale, "transparent", "transparent");
+  var mars = this.makeSquare(-100, -100, 30, 30);
   mars.img = "images/mars.png";
   mars.drawImg();
 
-  var jupiter = new Square(this.canvas, -200*this.scale, 120*this.scale, 70*this.scale, 70*this.scale, "transparent", "transparent");
+  var jupiter = this.makeSquare(-200, 120, 70, 70);
   jupiter.img = "images/jupiter.png";
   jupiter.drawImg();
 
-  var saturn = new Square(this.canvas, 250*this.scale, 135*this.scale, 60*this.scale, 60*this.scale, "transparent", "transparent");
+  var saturn = this.makeSquare(250, 135, 60, 60);
   saturn.img = "images/saturn.png";
   saturn.drawImg();
 
-  var neptune = new Square(this.canvas, -350*this.scale, -75*this.scale, 45*this.scale, 45*this.scale, "transparent", "transparent");
+  var neptune = this.makeSquare(-350, -75, 45, 45);
   neptune.img = "images/neptune.png";
   neptune.drawImg();
 
@@ -55,7 +55,7 @@ DrawCanvas.prototype.render = function() {
   uranus.drawImg();
   uranus.data = this.mainObject.planets[6]
 
-  var pluto= new Square(this.canvas, -390*this.scale, 200*this.scale, 20*this.scale, 20*this.scale, "transparent", "transparent");
+  var pluto= this.makeSquare(this.canvas, -390, 200, 20, 20);
   pluto.img = "images/pluto.png";
   pluto.drawImg();
 }

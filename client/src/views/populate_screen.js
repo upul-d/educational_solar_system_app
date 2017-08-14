@@ -12,9 +12,11 @@ var populateScreen = function(object){
 var populateRightBar = function(object){
   var rightBar = document.querySelector("#right-side");
   var dl = document.querySelector("#rside");
-  rightBar.removeChild(dl);
+  if(dl) rightBar.removeChild(dl);
 
   var dl2 = document.createElement("dl");
+  dl2.id = "rside";
+  
   for(var property of object.sideBar){
     var hr = document.createElement("hr");
     var link = document.createElement("a");
@@ -41,7 +43,7 @@ var addBottomDivClass = function(divToAddTo) {
 var populateInfoBox = function(object){
   var infoBox = document.querySelector("#info-box");
   var infoContainer = document.querySelector("#info-container");
-  infoContainer.removeChild(infoBox);
+  if(infoBox) infoContainer.removeChild(infoBox);
   var sectionDiv = document.createElement("section");
   sectionDiv.id = "info-box";
   addBottomDivClass(sectionDiv);
@@ -65,7 +67,7 @@ var populateInfoBox = function(object){
 var populateGallery = function(object) {
   var gallery = document.querySelector("#gallery");
   var infoContainer = document.querySelector('#info-container');
-  infoContainer.removeChild(gallery);
+  if(gallery) infoContainer.removeChild(gallery);
   var newGalleryDiv = document.createElement('section')
   newGalleryDiv.id = "gallery";
   addBottomDivClass(newGalleryDiv);

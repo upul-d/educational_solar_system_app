@@ -20,7 +20,7 @@ var requestComplete = function() {
 
   var jsonString = this.responseText;
   solarSystem = JSON.parse(jsonString);
-  populateScreen(solarSystem.planets[6]);
+  // populateScreen(solarSystem.planets[6]);
   new DrawCanvas(canvasHandler, canvas, solarSystem);
 }
 
@@ -42,7 +42,7 @@ window.addEventListener('load', function() {
   setNavEvents();
 
   canvasHandler.onClick = function(square){
-    console.log(square.data);
+    populateScreen(square.data);
   }
 
   manageBackgroundCanvas();
