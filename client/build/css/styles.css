@@ -85,6 +85,11 @@ nav {
 #info-container {
   width: 600px;
   margin: auto;
+  color: white;
+}
+
+#info-box h2 {
+  text-align: center;
 }
 
 #info-nav{
@@ -96,9 +101,4 @@ display: flex;
   background: white;
   width: 33.3%;
   border: none;
-}
-
-#info-box {
-  background: cyan;
-  height:20px;
 }
