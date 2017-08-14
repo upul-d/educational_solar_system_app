@@ -1,4 +1,4 @@
-
+var populateScreen = require("./views/populate_screen.js");
 var setNavEvents = require('./views/info_nav_events.js');
 var DrawCanvas = require('./views/draw_canvas.js');
 
@@ -17,10 +17,8 @@ var requestComplete = function() {
 
   var jsonString = this.responseText;
   solarSystem = JSON.parse(jsonString);
-  console.log(solarSystem);
+  populateScreen(solarSystem.planets[0]);
 }
-
-
 
 window.addEventListener('load', function() {
   var canvas = document.querySelector('#canvas');

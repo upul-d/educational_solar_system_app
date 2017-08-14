@@ -9,7 +9,13 @@ body {
 
 nav {
   background: blue;
-  height: 30px;
+  background-color: rgba(0, 0, 175, 0.3);
+}
+
+nav img{
+  width: 35px;
+  height: 35px;
+  margin-left:  10px;
 }
 
 .crumb-arrow{
