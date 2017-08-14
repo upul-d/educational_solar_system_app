@@ -8,6 +8,7 @@ var planets = [];
 solarSystem.planets = planets;
 
 // PLANETS ------------------------------------------
+
 var mercury = {
   "Name": "Mercury",
 
@@ -144,6 +145,62 @@ var earth = {
     "lowRes": "link for low-res image",
     "hiRes": "link for hi-res image"
   }],
+
+  "facts": ["fact 1", "fact 2", "fact 3"]
+}
+
+var mars = {
+  "Name": "Mars",
+
+  "breadCrumbs": [
+    {
+      "label": "Solar System",
+      "link": "localHost:3000/route-to-solar-system-page"
+    }
+  ],
+
+  "links": [
+    {
+      "label": "Curiosity",
+      "link": "route to curiosity"
+    }
+  ],
+
+  "mainImage": {
+    "label": "Mars",
+    "link": "image-link-to-go-here"
+  },
+
+  "sideBar": [
+    {
+      "label": "Length Of A Day",
+      "value": "24.65 hours"
+    },
+    {
+      "label": "Average Temperature In Celsius",
+      "value": -63
+    },
+    {
+      "label": "Distance From The Sun",
+      "value": "227,940,000 km"
+    }
+  ],
+
+  "description": [
+  {
+    "type": "paragraph",
+    "title": "Info on Mars",
+    "value": "Mars is a planet. It is the fourth planet from the sun. It is the next planet beyond Earth. Mars is more than 142 million miles from the sun. The planet is about one-sixth the size of Earth. Mars is known as the Red Planet. It gets its red color from the iron in its soil. Mars has two small moons. Their names are Phobos and Deimos. Mars is very cold. The average temperature on Mars is minus 80 degrees Fahrenheit -- way below freezing! Mars is rocky with canyons, volcanoes and craters all over it. Red dust covers almost all of Mars. It has clouds and wind, just as Earth does. Sometimes the wind blows the red dust into a dust storm. Tiny dust storms can look like tornados, and large ones can cover the whole planet!, Mars has about one-third the gravity of Earth. A rock dropped on Mars would fall slower than a rock dropped on Earth. Things weigh less on Mars than they weigh on Earth. A person who weighs 100 pounds on Earth would only weigh about 37 pounds on Mars because of less gravity.",
+
+  }],
+
+  "gallery": [
+    {
+      "label": "image 1",
+      "lowRes": "link for low-res image",
+      "hiRes": "link for hi-res image"
+    }
+  ],
 
   "facts": ["fact 1", "fact 2", "fact 3"]
 }
@@ -506,6 +563,10 @@ planets.push(mercury);
 planets.push(venus);
 
 planets.push(earth);
+
+planets.push(mars);
+
+planets.push(jupiter);
 
 planets.push(saturn);
 
