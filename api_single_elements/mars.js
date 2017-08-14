@@ -1,4 +1,4 @@
-var Mars = {
+var mars = {
   "Name": "Mars",
 
   "breadCrumbs": [

@@ -1,5 +1,5 @@
-var saturn = {
-  "Name": "Saturn",
+var jupiter = {
+  "Name": "Jupiter",
 
   "breadCrumbs": [
     {
@@ -18,11 +18,11 @@ var saturn = {
   "sideBar": [
     {
       "label": "Length Of A Day",
-      "value": "10.6 hours"
+      "value": "9.9 hours"
     },
     {
       "label": "Average Temperature In Celsius",
-      "value": -178
+      "value": -161
     },
     {
       "label": "Distance From The Sun",
