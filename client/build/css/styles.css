@@ -96,7 +96,8 @@ nav {
 }
 
 #info-nav{
-display: flex;
+  display: flex;
+  background: white;
 }
 
 #gallery img{
@@ -107,7 +108,8 @@ display: flex;
 #info-nav button{
   text-align: center;
   background: white;
-  width: 33.3%;
+  flex: 1;
+  margin: 0 2px 0 2px;
   border: none;
 }
 
