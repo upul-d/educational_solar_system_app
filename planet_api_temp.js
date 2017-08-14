@@ -67,11 +67,22 @@ solarSystem.details = {
   ],
 
   "gallery": [
-  {
-    "label": "image 1",
-    "lowRes": "link for low-res image",
-    "hiRes": "link for hi-res image"
-  }],
+    {
+      "label": "image 1",
+      "lowRes": "image/solar_system/sol_sys1",
+      "hiRes": "image/solar_system/sol_sys1"
+    },
+    {
+      "label": "image 2",
+      "lowRes": "image/solar_system/sol_sys2",
+      "hiRes": "image/solar_system/sol_sys2"
+    },
+    {
+      "label": "image 3",
+      "lowRes": "image/solar_system/sol_sys3",
+      "hiRes": "image/solar_system/sol_sys3"
+    },
+  ],
 
   "facts": ["fact 1", "fact 2", "fact 3"]
 
