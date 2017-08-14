@@ -189,49 +189,50 @@ var venus = {
 var earth = {
   "Name": "Earth",
 
-  "breadCrumbs": [
-  {
-    "label": "Solar System",
-    "link": "localHost:3000/route-to-solar-system-page"
-  }
-  ],
+  "breadCrumbs": [],
 
-  "links": [
-    {
-      "label": "Moon",
-      "link": "route to moon "
-    }
-  ],
+  "links": [],
 
-  "mainImage": {
-    "label": "Earth",
-    "link": "image-link-to-go-here"
-  },
+  "mainImage": {},
 
   "sideBar": [
     {
-      "label": "Radius",
-      "value": "6378.1 km"
+      "label": "Length Of A Day",
+      "value": "24h"
     },
     {
       "label": "Average Temperature In Celsius",
       "value": 16
+    },
+    {
+      "label": "Distance From The Sun",
+      "value": "149.6 million km"
     }
   ],
 
   "description": [
   {
-    "type": "paragraph",
-    "title": "info on earth",
-    "value": "info on earth"
+    "title": "Earth",
+    "value": "Earth is the third planet from the Sun and the only object in the Universe known to harbor life. According to radiometric dating and other sources of evidence, Earth formed over 4 billion years ago. Earth's gravity interacts with other objects in space, especially the Sun and the Moon, Earth's only natural satellite. During one orbit around the Sun, Earth rotates about its axis about 365.26 times; thus, an Earth year is about 365.26 days long. Earth's axis of rotation is tilted, producing seasonal variations on the planet's surface. The gravitational interaction between the Earth and Moon causes ocean tides, stabilizes the Earth's orientation on its axis, and gradually slows its rotation. Earth is the densest planet in the Solar System and the largest of the four terrestrial planets."
   }],
 
   "gallery": [
-  {
-    "label": "image 1",
-    "lowRes": "link for low-res image",
-    "hiRes": "link for hi-res image"
-  }],
+    {
+      "label": "image 1",
+      "lowRes": "./images/earth/earth1.png",
+      "hiRes": "./images/earth/earth1.png"
+    },
+    {
+      "label": "image 2",
+      "lowRes": "./images/earth/earth2.jpeg",
+      "hiRes": "./images/earth/earth2.jpeg"
+    },
+    {
+      "label": "image 3",
+      "lowRes": "./images/earth/earth3.png",
+      "hiRes": "./images/earth/earth3.png"
+    }
+  ],
 
   "facts": ["fact 1", "fact 2", "fact 3"]
 }
@@ -239,24 +240,11 @@ var earth = {
 var mars = {
   "Name": "Mars",
 
-  "breadCrumbs": [
-    {
-      "label": "Solar System",
-      "link": "localHost:3000/route-to-solar-system-page"
-    }
-  ],
+  "breadCrumbs": [],
 
-  "links": [
-    {
-      "label": "Curiosity",
-      "link": "route to curiosity"
-    }
-  ],
+  "links": [],
 
-  "mainImage": {
-    "label": "Mars",
-    "link": "image-link-to-go-here"
-  },
+  "mainImage": {},
 
   "sideBar": [
     {
@@ -275,17 +263,25 @@ var mars = {
 
   "description": [
   {
-    "type": "paragraph",
-    "title": "Info on Mars",
-    "value": "Mars is a planet. It is the fourth planet from the sun. It is the next planet beyond Earth. Mars is more than 142 million miles from the sun. The planet is about one-sixth the size of Earth. Mars is known as the Red Planet. It gets its red color from the iron in its soil. Mars has two small moons. Their names are Phobos and Deimos. Mars is very cold. The average temperature on Mars is minus 80 degrees Fahrenheit -- way below freezing! Mars is rocky with canyons, volcanoes and craters all over it. Red dust covers almost all of Mars. It has clouds and wind, just as Earth does. Sometimes the wind blows the red dust into a dust storm. Tiny dust storms can look like tornados, and large ones can cover the whole planet!, Mars has about one-third the gravity of Earth. A rock dropped on Mars would fall slower than a rock dropped on Earth. Things weigh less on Mars than they weigh on Earth. A person who weighs 100 pounds on Earth would only weigh about 37 pounds on Mars because of less gravity.",
-
+    "title": "Mars",
+    "value": "Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, after Mercury. Named after the Roman god of war, it is often referred to as the 'Red Planet' because the iron oxide prevalent on its surface gives it a reddish appearance.[15] Mars is a terrestrial planet with a thin atmosphere, having surface features reminiscent both of the impact craters of the Moon and the valleys, deserts, and polar ice caps of Earth. The rotational period and seasonal cycles of Mars are likewise similar to those of Earth, as is the tilt that produces the seasons. Mars is the site of Olympus Mons, the largest volcano and second-highest known mountain in the Solar System, and of Valles Marineris, one of the largest canyons in the Solar System. The smooth Borealis basin in the northern hemisphere covers 40% of the planet and may be a giant impact feature.[16][17] Mars has two moons, Phobos and Deimos, which are small and irregularly shaped."
   }],
 
   "gallery": [
     {
       "label": "image 1",
-      "lowRes": "link for low-res image",
-      "hiRes": "link for hi-res image"
+      "lowRes": "./images/mars/mars1.png",
+      "hiRes": "./images/mars/mars1.png"
+    },
+    {
+      "label": "image 2",
+      "lowRes": "./images/mars/mars2.png",
+      "hiRes": "./images/mars/mars2.png"
+    },
+    {
+      "label": "image 3",
+      "lowRes": "./images/mars/mars3.png",
+      "hiRes": "./images/mars/mars3.png"
     }
   ],
 
@@ -295,19 +291,11 @@ var mars = {
 var jupiter = {
   "Name": "Jupiter",
 
-  "breadCrumbs": [
-    {
-      "label": "Solar System",
-      "link": "localHost:3000/route-to-solar-system-page"
-    }
-  ],
+  "breadCrumbs": [],
 
   "links": [],
 
-  "mainImage": {
-    "label": "Jupiter",
-    "link": "image-link-to-go-here"
-  },
+  "mainImage": {},
 
   "sideBar": [
     {
@@ -326,17 +314,25 @@ var jupiter = {
 
   "description": [
   {
-    "type": "paragraph",
-    "title": "info on Jupiter",
-    "value": "Jupiter is the largest planet in the solar system. It is approximately 143,000 kilometers (about 89,000 miles) wide at its equator. Jupiter is so large that all of the other planets in the solar system could fit inside it. More than 1,300 Earths would fit inside Jupiter. Jupiter is like a star in composition. If Jupiter had been about 80 times more massive, it would have become a star rather than a planet. Jupiter is the fifth planet from the sun. Jupiter's average distance from the sun is 5.2 astronomical units, or AU. This distance is a little more than five times the distance from Earth to the sun. When viewed from Earth, Jupiter is usually the second brightest planet in the night sky, after Venus. The planet is named after Jupiter, the king of the Roman gods in mythology.",
-
+    "title": "Jupiter",
+    "value": "Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a giant planet with a mass one-thousandth that of the Sun, but two and a half times that of all the other planets in the Solar System combined. Jupiter and Saturn are gas giants; the other two giant planets, Uranus and Neptune are ice giants. Jupiter has been known to astronomers since antiquity.[12] The Romans named it after their god Jupiter.[13] When viewed from Earth, Jupiter can reach an apparent magnitude of −2.94, bright enough for its reflected light to cast shadows,[14] and making it on average the third-brightest object in the night sky after the Moon and Venus."
   }],
 
   "gallery": [
     {
       "label": "image 1",
-      "lowRes": "link for low-res image",
-      "hiRes": "link for hi-res image"
+      "lowRes": "./images/jupiter/jupiter1.png",
+      "hiRes": "./images/jupiter/jupiter1.png"
+    },
+    {
+      "label": "image 2",
+      "lowRes": "./images/jupiter/jupiter2.png",
+      "hiRes": "./images/jupiter/jupiter2.png"
+    },
+    {
+      "label": "image 3",
+      "lowRes": "./images/jupiter/jupiter3.png",
+      "hiRes": "./images/jupiter/jupiter3.png"
     }
   ],
 
@@ -346,19 +342,11 @@ var jupiter = {
 var saturn = {
   "Name": "Saturn",
 
-  "breadCrumbs": [
-    {
-      "label": "Solar System",
-      "link": "localHost:3000/route-to-solar-system-page"
-    }
-  ],
+  "breadCrumbs": [],
 
   "links": [],
 
-  "mainImage": {
-    "label": "Saturn",
-    "link": "image-link-to-go-here"
-  },
+  "mainImage": {},
 
   "sideBar": [
     {
@@ -377,16 +365,25 @@ var saturn = {
 
   "description": [
   {
-    "type": "paragraph",
-    "title": "info on saturn",
+    "title": "Saturn",
     "value": "The second largest planet in our solar system, adorned with thousands of beautiful ringlets, Saturn is unique among the planets. It is not the only planet to have rings -- made of chunks of ice and rock -- but none are as spectacular or as complicated as Saturn's. Like fellow gas giant Jupiter, Saturn is a massive ball of mostly hydrogen and helium. Surrounding by 53 confirmed and nine provisional moons, Saturn is home to some of the most fascinating landscapes in our solar system. From the jets of Enceladus to the methane lakes on smoggy Titan, the Saturn system is a rich source of scientific discovery and still holds many mysteries. The farthest planet from Earth observable by the unaided human eye, Saturn has been known since ancient times and is named for the Roman god of agriculture and wealth. The Greek equivalent was Cronos, the father of Zeus/Jupiter.",
   }],
 
   "gallery": [
     {
       "label": "image 1",
-      "lowRes": "link for low-res image",
-      "hiRes": "link for hi-res image"
+      "lowRes": "./images/saturn/saturn1.png",
+      "hiRes": "./images/saturn/saturn1.png"
+    },
+    {
+      "label": "image 2",
+      "lowRes": "./images/saturn/saturn2.png",
+      "hiRes": "./images/saturn/saturn2.png"
+    },
+    {
+      "label": "image 3",
+      "lowRes": "./images/saturn/saturn3.png",
+      "hiRes": "./images/saturn/saturn3.png"
     }
   ],
 

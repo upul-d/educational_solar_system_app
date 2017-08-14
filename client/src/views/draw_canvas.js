@@ -18,7 +18,6 @@ var DrawCanvas = function(canvasHandler, canvas, mainObject) {
 
 DrawCanvas.prototype.makeSquare = function(x, y, width, height){
   var square = new Square(this.canvas, x*this.scale, y*this.scale, width*this.scale, height*this.scale, "transparent", "transparent");
-  console.log("square: ", square);
   this.canvasHandler.squares.push(square);
   return square;
 }
@@ -41,18 +40,22 @@ DrawCanvas.prototype.render = function() {
   var earth = this.makeSquare(90, -90, 40, 40);
   earth.img = "images/earth.png";
   earth.drawImg();
+  earth.data = this.mainObject.planets[2];
 
   var mars = this.makeSquare(-100, -100, 30, 30);
   mars.img = "images/mars.png";
   mars.drawImg();
+  mars.data = this.mainObject.planets[3];
 
   var jupiter = this.makeSquare(-200, 120, 70, 70);
   jupiter.img = "images/jupiter.png";
   jupiter.drawImg();
+  jupiter.data = this.mainObject.planets[4];
 
   var saturn = this.makeSquare(250, 135, 60, 60);
   saturn.img = "images/saturn.png";
   saturn.drawImg();
+  saturn.data = this.mainObject.planets[5];
 
   var neptune = this.makeSquare(-350, -75, 45, 45);
   neptune.img = "images/neptune.png";
@@ -66,7 +69,6 @@ DrawCanvas.prototype.render = function() {
   var pluto= this.makeSquare(-390, 200, 20, 20);
   pluto.img = "images/pluto.png";
   pluto.drawImg();
-  console.log(this.canvasHandler.squares)
 }
 
 DrawCanvas.prototype.clear = function(){
@@ -75,15 +77,11 @@ DrawCanvas.prototype.clear = function(){
 }
 
 DrawCanvas.prototype.moveToLocation = function(square){
-  this.scale = 10;
+  this.scale = 7;
   this.clear();
-  // var x = 400 + square.x*this.scale - square.width/2*this.scale
-  // var y = 400 + square.y*this.scale - square.height/2*this.scale
-  // this.context.translate(x, y);
 
-  console.log(square);
   this.render();
-  this.context.translate(-square.x*this.scale-square.width*this.scale/2, -square.y*this.scale-square.height*this.scale/2);
+  this.context.translate(-square.x*this.scale - square.width*this.scale/2, -square.y*this.scale - square.height*this.scale/2);
 }
 
 

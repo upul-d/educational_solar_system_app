@@ -21,7 +21,8 @@ var requestComplete = function() {
 
   var jsonString = this.responseText;
   solarSystem = JSON.parse(jsonString);
-  // populateScreen(solarSystem.planets[6]);
+  populateScreen(solarSystem.planets[5]);
+  console.log(solarSystem);
   drawCanvas = new DrawCanvas(canvasHandler, canvas, solarSystem);
 }
 
@@ -45,9 +46,9 @@ window.addEventListener('load', function() {
   var currentSquare;
   canvasHandler.onClick = function(square){
     if(currentSquare === square) return;
-    // 
-    // currentSquare = square;
-    // populateScreen(square.data);
+
+    currentSquare = square;
+    populateScreen(square.data);
     drawCanvas.moveToLocation(square);
   }
 
