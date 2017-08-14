@@ -41,7 +41,11 @@ window.addEventListener('load', function() {
   canvasHandler = new CanvasHandler(canvas)
   setNavEvents();
 
+  var currentSquare;
   canvasHandler.onClick = function(square){
+    if(currentSquare === square) return;
+    
+    currentSquare = square;
     populateScreen(square.data);
   }
 
