@@ -1,4 +1,5 @@
 
+var setNavEvents = require('./views/info_nav_events.js');
 var DrawCanvas = require('./views/draw_canvas.js');
 
 var makeRequest = function(url, callback) {
@@ -25,4 +26,5 @@ window.addEventListener('load', function() {
   var canvas = document.querySelector('#canvas');
   new DrawCanvas(canvas);
   makeRequest("/solar_system", requestComplete);
+  setNavEvents();
 })
