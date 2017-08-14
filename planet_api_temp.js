@@ -445,7 +445,7 @@ var pluto = {
 earth.moons = [];
 
 var moon = {
-  "Name": "Moon",
+  "Name": "The Moon",
 
   "breadCrumbs": [
     {
@@ -619,7 +619,7 @@ planets.push(mercury);
 planets.push(venus);
 
 planets.push(earth);
-earth.moons.push(moons);
+earth.moons.push(moon);
 
 planets.push(mars);
 

@@ -6,12 +6,16 @@ var DrawCanvas = function(canvas) {
   this.context = canvas.getContext("2d");
   this.scale = 1;
   this.render();
-} 
+}
+
+DrawCanvas.prototype.makeSquare = function(x, y, width, height){
+  return new Square(this.canvas, x*this.scale, y*this.scale, width*this.scale, height*this.scale, "transparent", "transparent");
+}
 
 DrawCanvas.prototype.render = function() {
   this.context.translate(400, 250);
   // this.context.translate(400+(-90*this.scale)-20*this.scale, 250+(90*this.scale)-20*this.scale);
-  var sun = new Square(this.canvas, -55*this.scale, -55*this.scale, 110*this.scale, 110*this.scale, "transparent", "transparent");
+  var sun = this.makeSquare(-55, -55, 110, 110);
   sun.img = "images/sun.png";
   sun.drawImg();
 
