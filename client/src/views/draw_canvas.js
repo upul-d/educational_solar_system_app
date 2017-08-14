@@ -92,5 +92,38 @@ DrawCanvas.prototype.moveToLocation = function(square){
   this.context.translate(-square.x*this.scale - square.width*this.scale/2, -square.y*this.scale - square.height*this.scale/2);
 }
 
+DrawCanvas.prototype.zoomToSquare = function(square){
+  this.clear();
+  square.drawImg();
+
+  var loop;
+  var animate = function(){
+    this.clear();
+    this.scale += 0.0005;
+    square.width *= this.scale;
+    square.height *= this.scale;
+    square.x = 0 - square.width/2;
+    square.y = 0 - square.height/2;
+    square.drawImg();
+    console.log(this.scale);
+    if(this.scale > 1.05){
+      clearInterval(loop);
+    }
+  }.bind(this);
+  loop = setInterval(animate, 100);
+}
+
+DrawCanvas.prototype.zoomOut = function(){
+  var loop;
+  var animate = function(){
+    this.clear();
+    this.scale -= 0.01;
+    this.render();
+    if(this.scale < 0){
+      clearInterval(loop);
+    }
+  }.bind(this);
+  loop = setInterval(animate, 100);
+}
 
 module.exports = DrawCanvas;

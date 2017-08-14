@@ -49,7 +49,7 @@ window.addEventListener('load', function() {
 
     currentSquare = square;
     populateScreen(square.data);
-    drawCanvas.moveToLocation(square);
+    drawCanvas.zoomToSquare(square);
   }
 
   var hoverName = document.querySelector("#hover");
