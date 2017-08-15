@@ -21,7 +21,7 @@ var requestComplete = function() {
 
   var jsonString = this.responseText;
   solarSystem = JSON.parse(jsonString);
-  populateScreen(solarSystem.planets[5]);
+  populateScreen(solarSystem.details[0]);
   console.log(solarSystem);
   // var canvas = document.querySelector('#canvas');
   // console.log('this is the canvas:', canvas);

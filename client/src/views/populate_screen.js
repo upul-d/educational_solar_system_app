@@ -73,9 +73,19 @@ var populateGallery = function(object) {
   addBottomDivClass(newGalleryDiv);
 
   for(var property of object.gallery){
-    var image = document.createElement("img");
-    image.src = property.lowRes;
-    newGalleryDiv.appendChild(image);
+    var imageDiv = document.createElement("span");
+    imageDiv.classList.add("zoom");
+
+    var imageSmall = document.createElement("img");
+    imageSmall.src = property.lowRes;
+    imageSmall.classList.add("picSmall");
+    var imageBig = document.createElement("img");
+    imageBig.src = property.lowRes;
+    imageBig.classList.add("picBig");
+
+    imageDiv.appendChild(imageSmall);
+    imageDiv.appendChild(imageBig);
+    newGalleryDiv.appendChild(imageDiv);
   }
   infoContainer.appendChild(newGalleryDiv);
 }
