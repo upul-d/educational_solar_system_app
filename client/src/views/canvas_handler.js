@@ -1,6 +1,6 @@
 var CanvasHandler = function(canvas) {
 
-  this.squares =[];
+  this.squares = [];
   this.onClick = function() {};
 
   canvas.addEventListener("click", function(event) {
@@ -17,6 +17,7 @@ var CanvasHandler = function(canvas) {
   canvas.addEventListener("mousemove", function(event) {
     var x = event.offsetX - 400;
     var y = event.offsetY - 250;
+    console.log("hey")
     var square = this.getSquareWithin(x,y);
     this.onHover(square);
   }.bind(this))
@@ -31,12 +32,5 @@ CanvasHandler.prototype.getSquareWithin = function(x,y){
   }
   return null;
 }
-
-
-
-
-
-
-
 
 module.exports = CanvasHandler
