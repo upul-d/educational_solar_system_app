@@ -28,6 +28,7 @@ DrawCanvas.prototype.render = function() {
   var sun = this.makeSquare(-55, -55, 110, 110);
   sun.img = "images/sun.png";
   sun.drawImg();
+  sun.data = this.mainObject.suns[0];
 
   var mercury = this.makeSquare(-65, 65, 20, 20);
   mercury.img = "images/mercury.png";
