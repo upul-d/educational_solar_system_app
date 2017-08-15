@@ -90,6 +90,11 @@ nav img{
   background: transparent;
   width: 800px;
   height: 500px;
+  text-align: center;
+}
+
+#form {
+  display: none;
 }
 
 #info-container {

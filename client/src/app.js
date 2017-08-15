@@ -55,6 +55,11 @@ window.addEventListener('load', function() {
     hoverName.innerText = square.data.Name;
     drawCanvas.moveToLocation(square);
     canvasHandler.onHover = function(){};
+
+  var form = document.querySelector("#form");
+  form.style.display = "block";
+
+
   }
 
   
