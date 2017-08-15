@@ -103,8 +103,16 @@ var sun = {
 
   "sideBar": [
     {
-      "label": "Length Of A Day",
-      "value": "defines a day"
+      "label": "Age",
+      "value": "4.6 Billion Years"
+    },
+    {
+      "label": "Type Of Star",
+      "value": "G-type main-sequence star"
+    },
+    {
+      "label": "Radius",
+      "value": "695,700 km"
     },
     {
       "label": "Average Surface Temperature In Celsius",
@@ -112,19 +120,24 @@ var sun = {
     },
     {
       "label": "Average Core Temperature In Celsius",
-      "value": ">9000"
+      "value": "15 million"
     },
     {
-      "label": "Distance From The Sun",
-      "value": "What is this?"
+      "label": "Total Mass",
+      "value": "1.989 × 10^30 kg"
     }
   ],
 
   "description": [
-  {
-    "title": "Sun",
-    "value": "Praise the sun!"
-  }],
+    {
+      "title": "Sol",
+      "value": "The Sun is a G-type main-sequence star (G2V) based on its spectral class. As such, it is informally referred to as a yellow dwarf. It formed approximately 4.6 billion years ago from the gravitational collapse of matter within a region of a large molecular cloud. Most of this matter gathered in the center, whereas the rest flattened into an orbiting disk that became the Solar System. The central mass became so hot and dense that it eventually initiated nuclear fusion in its core. It is thought that almost all stars form by this process."
+    },
+    {
+      "title": "The Sun and The Solar System",
+      "value": "The Sun is the star at the center of the Solar System. It is a nearly perfect sphere of hot plasma, with internal convective motion that generates a magnetic field via a dynamo process. It is by far the most important source of energy for life on Earth. Its diameter is about 109 times that of Earth, and its mass is about 330,000 times that of Earth, accounting for about 99.86% of the total mass of the Solar System. About three quarters of the Sun's mass consists of hydrogen (~73%); the rest is mostly helium (~25%), with much smaller quantities of heavier elements, including oxygen, carbon, neon, and iron."
+    },
+  ],
 
   "gallery": [
     {
