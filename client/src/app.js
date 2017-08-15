@@ -44,6 +44,10 @@ window.addEventListener('load', function() {
   if(!storedFavourites){
     var emptyArray = JSON.stringify([]);
     localStorage.setItem("favourites", emptyArray);
+  } else {
+    var finalFavourites = JSON.parse(storedFavourites);
+    populateFavourites(finalFavourites);
+    
   }
 
   var canvas = document.querySelector('#canvas');
@@ -81,6 +85,9 @@ window.addEventListener('load', function() {
 
       var jsonString = JSON.stringify(favouritesArray);
       localStorage.setItem("favourites", jsonString);
+
+      populateFavourites(favouritesArray);
+
     })
   }
 
@@ -95,4 +102,29 @@ window.addEventListener('load', function() {
   }
 
   manageBackgroundCanvas();
+
+
 })
+
+var populateFavourites = function(favourites) {
+  removeFavourites();
+
+  var ul = document.createElement("ul");
+  ul.id= "favUl"
+  console.log(favourites);
+  for(favourite of favourites){
+    var li = document.createElement("li");
+    li.innerText = favourite.Name;
+    ul.appendChild(li);
+  }
+  var box = document.querySelector("#left-side");
+  box.appendChild(ul);
+}
+
+var removeFavourites = function(favourites) {
+  var sidebar = document.querySelector("#left-side");
+  var ul = document.querySelector("#favUl");
+  if(ul){
+  sidebar.removeChild(ul);
+}
+}
