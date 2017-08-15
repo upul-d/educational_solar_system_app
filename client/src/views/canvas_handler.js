@@ -24,7 +24,7 @@ var CanvasHandler = function(canvas) {
 }
 
 CanvasHandler.prototype.getSquareWithin = function(x,y){
-  for (square of this.squares) {
+  for (var square of this.squares) {
     if (square.isWithin(x,y)) {
       return square
     }

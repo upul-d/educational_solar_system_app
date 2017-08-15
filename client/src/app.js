@@ -23,6 +23,8 @@ var requestComplete = function() {
   solarSystem = JSON.parse(jsonString);
   populateScreen(solarSystem.planets[5]);
   console.log(solarSystem);
+  // var canvas = document.querySelector('#canvas');
+  // console.log('this is the canvas:', canvas);
   drawCanvas = new DrawCanvas(canvasHandler, canvas, solarSystem);
 }
 
@@ -39,8 +41,8 @@ var manageBackgroundCanvas = function(){
 
 window.addEventListener('load', function() {
   var canvas = document.querySelector('#canvas');
+  canvasHandler = new CanvasHandler(canvas);
   makeRequest("/solar_system", requestComplete);
-  canvasHandler = new CanvasHandler(canvas)
   setNavEvents();
 
   var currentSquare;
@@ -49,7 +51,7 @@ window.addEventListener('load', function() {
 
     currentSquare = square;
     populateScreen(square.data);
-    drawCanvas.zoomToSquare(square);
+    drawCanvas.moveToLocation(square);
   }
 
   var hoverName = document.querySelector("#hover");
