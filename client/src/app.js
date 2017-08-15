@@ -67,12 +67,20 @@ window.addEventListener('load', function() {
 
     var favouritesButton = document.querySelector("#favouritesButton");
     favouritesButton.addEventListener("click", function() {
-      
+
       var storedFavourites = localStorage.getItem("favourites");
       var favouritesArray = JSON.parse(storedFavourites);
-      favouritesArray.push(square.data);
-      
 
+      for(var item of favouritesArray){
+        if(item.Name === square.data.Name){
+          return;
+        }
+      }
+
+      favouritesArray.push(square.data);
+
+      var jsonString = JSON.stringify(favouritesArray);
+      localStorage.setItem("favourites", jsonString);
     })
   }
 
