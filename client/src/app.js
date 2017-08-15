@@ -51,37 +51,14 @@ window.addEventListener('load', function() {
 
     currentSquare = square;
     populateScreen(square.data);
-    console.log('suare data:', square.data);
     drawCanvas.moveToLocation(square);
   }
 
   var hoverName = document.querySelector("#hover");
-  var currentHoverSquare;
-  var currentSquareWidth;
-  var currentSquareHeight;
-  var isBigSquare = false;
   canvasHandler.onHover = function(square){
     if(square){
-      if(!isBigSquare){
-        isBigSquare = true;
-        square.clear();
-        currentSquare = square;
-        currentSquareWidth = square.width;
-        currentSquareHeight = square.height;
-        square.width += 5;
-        square.height += 5;
-        square.drawImg();
-      }
       hoverName.innerText = square.data.Name;
     }else{
-      isBigSquare = false;
-      if(currentSquare){
-        currentSquare.clear();
-        currentSquare.width = currentSquareWidth;
-        currentSquare.height = currentSquareHeight;
-        currentSquare.drawImg();
-        currentSquare = null;
-      }
       hoverName.innerText = "Solar System";
     }
 
