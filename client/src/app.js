@@ -40,6 +40,12 @@ var manageBackgroundCanvas = function(){
 }
 
 window.addEventListener('load', function() {
+  var storedFavourites = localStorage.getItem("favourites");
+  if(!storedFavourites){
+    var emptyArray = JSON.stringify([]);
+    localStorage.setItem("favourites", emptyArray);
+  }
+
   var canvas = document.querySelector('#canvas');
   canvasHandler = new CanvasHandler(canvas);
   makeRequest("/solar_system", requestComplete);
@@ -56,10 +62,18 @@ window.addEventListener('load', function() {
     drawCanvas.moveToLocation(square);
     canvasHandler.onHover = function(){};
 
-  var form = document.querySelector("#form");
-  form.style.display = "block";
+    var form = document.querySelector("#form");
+    form.style.display = "block";
 
+    var favouritesButton = document.querySelector("#favouritesButton");
+    favouritesButton.addEventListener("click", function() {
+      
+      var storedFavourites = localStorage.getItem("favourites");
+      var favouritesArray = JSON.parse(storedFavourites);
+      favouritesArray.push(square.data);
+      
 
+    })
   }
 
   
