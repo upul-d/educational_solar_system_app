@@ -108,15 +108,22 @@ window.addEventListener('load', function() {
 
 var populateFavourites = function(favourites) {
   removeFavourites();
-
+  var newArray = []
   var ul = document.createElement("ul");
   ul.id= "favUl"
-  console.log(favourites);
-  for(favourite of favourites){
+
+  var liEvent = function(){
+    
+  }
+
+  for(var favourite of favourites){
     var li = document.createElement("li");
     li.innerText = favourite.Name;
     ul.appendChild(li);
+    newArray.push(li);
   }
+
+  
   var box = document.querySelector("#left-side");
   box.appendChild(ul);
 }
