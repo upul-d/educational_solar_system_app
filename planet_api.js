@@ -24,8 +24,8 @@ solarSystem.details = [{
       "value": "Proxima Centauri"
     },
     {
-      "label": "Closest neighbour",
-      "value": "Proxima Centauri"
+      "label": "Orbit Period",
+      "value": "225-250 Million Years"
     },
     {
       "label": "Planets",
@@ -38,10 +38,6 @@ solarSystem.details = [{
     {
       "label": "Radius",
       "value": "0.95 light years"
-    },
-    {
-      "label": "temperatureCelsius",
-      "value": 167
     }
   ],
 
@@ -86,11 +82,9 @@ solarSystem.details = [{
 }]
 
 // SUN ------------------------------------------
-// var suns = [];
-var planets = [];
+
 
 solarSystem.suns = [];
-solarSystem.planets = planets;
 
 var sun = {
   "Name": "Sun",
@@ -161,6 +155,9 @@ var sun = {
 }
 
 // PLANETS ------------------------------------------
+
+var planets = [];
+solarSystem.planets = planets;
 
 var mercury = {
   "Name": "Mercury",
