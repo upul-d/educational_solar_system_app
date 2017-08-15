@@ -65,29 +65,30 @@ var populateInfoBox = function(object){
 }
 
 var populateGallery = function(object) {
-  var gallery = document.querySelector("#gallery");
-  var infoContainer = document.querySelector('#info-container');
-  if(gallery) infoContainer.removeChild(gallery);
-  var newGalleryDiv = document.createElement('section')
-  newGalleryDiv.id = "gallery";
-  addBottomDivClass(newGalleryDiv);
+  // var gallery = document.querySelector("#gallery");
+  // var infoContainer = document.querySelector('#info-container');
+  // if(gallery) infoContainer.removeChild(gallery);
+  // var newGalleryDiv = document.createElement('section')
+  // newGalleryDiv.id = "gallery";
+  // addBottomDivClass(newGalleryDiv);
 
-  for(var property of object.gallery){
-    var imageDiv = document.createElement("span");
-    imageDiv.classList.add("zoom");
+  // for(var property of object.gallery){
+  //   var imageDiv = document.createElement("span");
+  //   imageDiv.classList.add("zoom");
 
-    var imageSmall = document.createElement("img");
-    imageSmall.src = property.lowRes;
-    imageSmall.classList.add("picSmall");
-    var imageBig = document.createElement("img");
-    imageBig.src = property.lowRes;
-    imageBig.classList.add("picBig");
+  //   var imageSmall = document.createElement("img");
+  //   imageSmall.src = property.lowRes;
+  //   imageSmall.classList.add("picSmall");
+    
+  //   var imageBig = document.createElement("img");
+  //   imageBig.src = property.lowRes;
+  //   imageBig.classList.add("picBig");
 
-    imageDiv.appendChild(imageSmall);
-    imageDiv.appendChild(imageBig);
-    newGalleryDiv.appendChild(imageDiv);
-  }
-  infoContainer.appendChild(newGalleryDiv);
+  //   imageDiv.appendChild(imageSmall);
+  //   imageDiv.appendChild(imageBig);
+  //   newGalleryDiv.appendChild(imageDiv);
+  // }
+  // infoContainer.appendChild(newGalleryDiv);
 }
 
 var populateFunFacts = function(object){

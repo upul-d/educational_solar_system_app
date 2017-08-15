@@ -46,15 +46,18 @@ window.addEventListener('load', function() {
   setNavEvents();
 
   var currentSquare;
+  var hoverName = document.querySelector("#hover");
   canvasHandler.onClick = function(square){
     if(currentSquare === square) return;
 
     currentSquare = square;
     populateScreen(square.data);
+    hoverName.innerText = square.data.Name;
     drawCanvas.moveToLocation(square);
+    canvasHandler.onHover = function(){};
   }
 
-  var hoverName = document.querySelector("#hover");
+  
   canvasHandler.onHover = function(square){
     if(square){
       hoverName.innerText = square.data.Name;
