@@ -28,10 +28,6 @@ Square.prototype.drawImg = function() {
   }.bind(this))
 }
 
-Square.prototype.clear = function(){
-  this.context.clearRect(this.x, this.y, this.width, this.height);
-}
-
 Square.prototype.isWithin = function (x,y) {
   if(x > this.x && x < this.x + this.width && y > this.y && y < this.y + this.height){
     return true;
