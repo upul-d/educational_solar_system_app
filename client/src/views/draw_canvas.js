@@ -14,6 +14,7 @@ var DrawCanvas = function(canvasHandler, canvas, mainObject) {
   this.scale = 1;
   this.mainObject = mainObject;
   this.render();
+  this.context.save();
 }
 
 DrawCanvas.prototype.makeSquare = function(x, y, width, height){
@@ -82,15 +83,42 @@ DrawCanvas.prototype.render = function() {
 
 DrawCanvas.prototype.clear = function(){
     this.canvasHandler.squares = []
-    this.context.clearRect(-this.canvasWidth/2, -this.canvasHeight/2, this.canvasWidth, this.canvasHeight);
+    this.context.clearRect(-this.canvasWidth/2 * this.scale, -this.canvasHeight/2 * this.scale, this.canvasWidth * this.scale, this.canvasHeight * this.scale);
 }
 
 DrawCanvas.prototype.moveToLocation = function(square){
-  this.scale = 7;
+  this.context.restore();
+  var shouldScale = this.scale === 1;
+
   this.clear();
+  this.scale = 7;
+
+  if (shouldScale){
+    var x = -square.x*this.scale - square.width*this.scale/2
+    var y = -square.y*this.scale - square.height*this.scale/2
+  }
+  else {
+    var x = -square.x;
+    var y = -square.y;
+  }
+
   this.render();
-  this.context.translate(-square.x*this.scale - square.width*this.scale/2, -square.y*this.scale - square.height*this.scale/2);
+  this.context.translate(x, y);
+
+  console.log('x, y:', x,y);
+  console.log('scale:', this.scale);
+
 }
+
+// DrawCanvas.prototype.moveAgainToLocation = function(square){
+//   this.scale = 7;
+//   this.clear();
+//   this.render();
+//   this.context.translate(square.x, square.y)
+//   // this.context.translate(square.x/7, square.y/7);
+//   // this.moveToLocation(square);
+//
+// }
 
 DrawCanvas.prototype.zoomToSquare = function(square){
   this.clear();

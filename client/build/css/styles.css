@@ -115,14 +115,6 @@ nav img{
   background: white;
 }
 
-#gallery {
-  display: flex !important;
-}
-
-#gallery div{
-  flex: 1;
-}
-
 #gallery img{
   height: 100px;
   margin: 10px;

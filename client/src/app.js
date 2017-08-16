@@ -126,7 +126,7 @@ var populateFavourites = function(favourites) {
       var squares = canvasHandler.squares;
       for(var square of squares){
         if(square.data.Name === favourites[index].Name){
-          manageMoveToLocation(square);
+          drawCanvas.moveToLocation(square);
           break;
         }
       }

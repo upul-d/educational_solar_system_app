@@ -1,4 +1,4 @@
 #gallery img:hover{
-  transform: scale(3,3);
+  transform: scale(4,4);
 	transform-origin:0 0;
 }
