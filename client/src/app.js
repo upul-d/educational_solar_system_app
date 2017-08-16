@@ -47,7 +47,7 @@ window.addEventListener('load', function() {
   } else {
     var finalFavourites = JSON.parse(storedFavourites);
     populateFavourites(finalFavourites);
-    
+
   }
 
   var canvas = document.querySelector('#canvas');
@@ -64,6 +64,7 @@ window.addEventListener('load', function() {
     populateScreen(square.data);
     hoverName.innerText = square.data.Name;
     drawCanvas.moveToLocation(square);
+    canvasHandler.onClick = function(){};
     canvasHandler.onHover = function(){};
 
     var form = document.querySelector("#form");
@@ -87,18 +88,16 @@ window.addEventListener('load', function() {
       localStorage.setItem("favourites", jsonString);
 
       populateFavourites(favouritesArray);
-
     })
   }
 
-  
+
   canvasHandler.onHover = function(square){
     if(square){
       hoverName.innerText = square.data.Name;
     }else{
       hoverName.innerText = "Solar System";
     }
-
   }
 
   manageBackgroundCanvas();
@@ -113,17 +112,24 @@ var populateFavourites = function(favourites) {
   ul.id= "favUl"
 
   var liEvent = function(){
-    
+
   }
 
-  for(var favourite of favourites){
+  favourites.forEach(function (favourite, index) {
     var li = document.createElement("li");
-    li.innerText = favourite.Name;
+    li.innerHTML = "<a href='#'>" + favourite.Name + "</a>";
+    li.addEventListener('click', function(){
+      populateScreen(favourites[index]);
+    })
     ul.appendChild(li);
     newArray.push(li);
+  });
+
+  for(var favourite of favourites){
+
   }
 
-  
+
   var box = document.querySelector("#left-side");
   box.appendChild(ul);
 }
