@@ -82,32 +82,19 @@ DrawCanvas.prototype.render = function() {
 }
 
 DrawCanvas.prototype.clear = function(){
-    this.canvasHandler.squares = []
+    // this.canvasHandler.squares = []
     this.context.clearRect(-this.canvasWidth/2 * this.scale, -this.canvasHeight/2 * this.scale, this.canvasWidth * this.scale, this.canvasHeight * this.scale);
 }
 
 DrawCanvas.prototype.moveToLocation = function(square){
-  this.context.restore();
-  var shouldScale = this.scale === 1;
-
   this.clear();
+
   this.scale = 7;
-
-  if (shouldScale){
-    var x = -square.x*this.scale - square.width*this.scale/2
-    var y = -square.y*this.scale - square.height*this.scale/2
-  }
-  else {
-    var x = -square.x;
-    var y = -square.y;
-  }
-
-  this.render();
-  this.context.translate(x, y);
-
-  console.log('x, y:', x,y);
-  console.log('scale:', this.scale);
-
+  var newSquare = this.makeSquare(-square.width/2, -square.height/2, square.width, square.height);
+  newSquare.img = square.img;
+  newSquare.drawImg()
+  newSquare.data = square.data;
+  console.log(newSquare);
 }
 
 // DrawCanvas.prototype.moveAgainToLocation = function(square){
