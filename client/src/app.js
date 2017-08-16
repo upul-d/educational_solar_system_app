@@ -5,6 +5,7 @@ var CanvasHandler = require('./views/canvas_handler.js');
 
 var canvasHandler;
 var drawCanvas;
+var hoverName;
 
 var makeRequest = function(url, callback) {
   var request = new XMLHttpRequest();
@@ -56,19 +57,13 @@ window.addEventListener('load', function() {
   setNavEvents();
 
   var currentSquare;
-  var hoverName = document.querySelector("#hover");
+  hoverName = document.querySelector("#hover");
   canvasHandler.onClick = function(square){
     if(currentSquare === square) return;
 
     currentSquare = square;
     populateScreen(square.data);
-    hoverName.innerText = square.data.Name;
-    drawCanvas.moveToLocation(square);
-    canvasHandler.onClick = function(){};
-    canvasHandler.onHover = function(){};
-
-    var form = document.querySelector("#form");
-    form.style.display = "block";
+    manageMoveToLocation(square);
 
     var favouritesButton = document.querySelector("#favouritesButton");
     favouritesButton.addEventListener("click", function() {
@@ -105,6 +100,15 @@ window.addEventListener('load', function() {
 
 })
 
+var manageMoveToLocation = function(square){
+  drawCanvas.moveToLocation(square);
+  hoverName.innerText = square.data.Name;
+  var form = document.querySelector("#form");
+  form.style.display = "block";
+  canvasHandler.onClick = function(){};
+  canvasHandler.onHover = function(){};
+}
+
 var populateFavourites = function(favourites) {
   removeFavourites();
   var newArray = []
@@ -122,7 +126,7 @@ var populateFavourites = function(favourites) {
       var squares = canvasHandler.squares;
       for(var square of squares){
         if(square.data.Name === favourites[index].Name){
-          drawCanvas.moveToLocation(square);
+          manageMoveToLocation(square);
           break;
         }
       }
