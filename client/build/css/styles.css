@@ -45,6 +45,18 @@ nav img{
   background-color: rgba(0, 0, 175, 0.3);
 }
 
+canvas{
+  position: absolute;
+}
+
+#star-field{
+  z-index: 0;
+}
+
+#canvas{
+  z-index: 1;
+}
+
 .side {
   background-color: rgba(0, 0, 175, 0.3);
   height: 500px;
