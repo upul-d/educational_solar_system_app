@@ -82,7 +82,7 @@ DrawCanvas.prototype.render = function() {
 }
 
 DrawCanvas.prototype.clear = function(){
-    this.canvasHandler.squares = []
+    // this.canvasHandler.squares = []
     this.context.clearRect(-this.canvasWidth/2 * this.scale, -this.canvasHeight/2 * this.scale, this.canvasWidth * this.scale, this.canvasHeight * this.scale);
 }
 
