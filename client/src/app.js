@@ -119,6 +119,13 @@ var populateFavourites = function(favourites) {
     var li = document.createElement("li");
     li.innerHTML = "<a href='#'>" + favourite.Name + "</a>";
     li.addEventListener('click', function(){
+      var squares = canvasHandler.squares;
+      for(var square of squares){
+        if(square.data.Name === favourites[index].Name){
+          drawCanvas.moveToLocation(square);
+          break;
+        }
+      }
       populateScreen(favourites[index]);
     })
     ul.appendChild(li);

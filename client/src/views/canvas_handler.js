@@ -1,6 +1,6 @@
 var CanvasHandler = function(canvas) {
 
-  this.squares =[];
+  this.squares = [];
   this.onClick = function() {};
 
   canvas.addEventListener("click", function(event) {

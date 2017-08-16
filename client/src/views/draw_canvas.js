@@ -88,7 +88,6 @@ DrawCanvas.prototype.clear = function(){
 DrawCanvas.prototype.moveToLocation = function(square){
   this.scale = 7;
   this.clear();
-
   this.render();
   this.context.translate(-square.x*this.scale - square.width*this.scale/2, -square.y*this.scale - square.height*this.scale/2);
 }
