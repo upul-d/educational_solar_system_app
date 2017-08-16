@@ -24,8 +24,6 @@ DrawCanvas.prototype.makeSquare = function(x, y, width, height){
 }
 
 DrawCanvas.prototype.render = function() {
-  // this.scale = 10;
-  // this.context.translate(400+(-90*this.scale)-20*this.scale, 250+(90*this.scale)-20*this.scale);
   var sun = this.makeSquare(-55, -55, 110, 110);
   sun.img = "images/sun.png";
   sun.drawImg();
@@ -61,19 +59,15 @@ DrawCanvas.prototype.render = function() {
   saturn.drawImg();
   saturn.data = this.mainObject.planets[5];
 
-
   var uranus = this.makeSquare(320, -200, 45, 45);
   uranus.img = "images/uranus.png";
   uranus.drawImg();
   uranus.data = this.mainObject.planets[6]
 
-
   var neptune = this.makeSquare(-350, -75, 45, 45);
   neptune.img = "images/neptune.png";
   neptune.drawImg();
   neptune.data = this.mainObject.planets[7];
-
-
 
   var pluto= this.makeSquare(-390, 200, 20, 20);
   pluto.img = "images/pluto.png";
@@ -82,63 +76,18 @@ DrawCanvas.prototype.render = function() {
 }
 
 DrawCanvas.prototype.clear = function(){
-    // this.canvasHandler.squares = []
     this.context.clearRect(-this.canvasWidth/2 * this.scale, -this.canvasHeight/2 * this.scale, this.canvasWidth * this.scale, this.canvasHeight * this.scale);
 }
 
 DrawCanvas.prototype.moveToLocation = function(square){
-  this.context.restore();
-  var shouldScale = this.scale === 1;
-
   this.clear();
+
   this.scale = 7;
-
-  if (shouldScale){
-    var x = -square.x*this.scale - square.width*this.scale/2
-    var y = -square.y*this.scale - square.height*this.scale/2
-  }
-  else {
-    var x = -square.x;
-    var y = -square.y;
-  }
-
-  this.render();
-  this.context.translate(x, y);
-
-  console.log('x, y:', x,y);
-  console.log('scale:', this.scale);
-
-}
-
-// DrawCanvas.prototype.moveAgainToLocation = function(square){
-//   this.scale = 7;
-//   this.clear();
-//   this.render();
-//   this.context.translate(square.x, square.y)
-//   // this.context.translate(square.x/7, square.y/7);
-//   // this.moveToLocation(square);
-//
-// }
-
-DrawCanvas.prototype.zoomToSquare = function(square){
-  this.clear();
-  square.drawImg();
-
-  var loop;
-  var animate = function(){
-    this.clear();
-    this.scale += 0.0005;
-    square.width *= this.scale;
-    square.height *= this.scale;
-    square.x = 0 - square.width/2;
-    square.y = 0 - square.height/2;
-    square.drawImg();
-    console.log(this.scale);
-    if(this.scale > 1.05){
-      clearInterval(loop);
-    }
-  }.bind(this);
-  loop = setInterval(animate, 100);
+  var newSquare = this.makeSquare(-square.width/2, -square.height/2, square.width, square.height);
+  newSquare.img = square.img;
+  newSquare.drawImg()
+  newSquare.data = square.data;
+  console.log(newSquare);
 }
 
 DrawCanvas.prototype.zoomOut = function(){

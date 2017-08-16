@@ -1,5 +1,5 @@
 body {
-  background-image: url("/../images/space_background.gif");
+  background-image: url("/../images/space_bckgrnd.jpg");
   margin: 0;
 }
 
@@ -44,6 +44,18 @@ nav img{
   padding: 5px 20px 5px 20px;
   background-color: rgba(0, 0, 175, 0.3);
 }
+
+/*canvas{
+  position: absolute;
+}
+
+#star-field{
+  z-index: 0;
+}
+
+#canvas{
+  z-index: 1;
+}*/
 
 .side {
   background-color: rgba(0, 0, 175, 0.3);
@@ -139,6 +151,10 @@ nav img{
 
 #space-div{
   height: 400px;
+}
+
+#fun-facts-button{
+  display: none;
 }
 
 /*CSS code below acquired from www.bestcssbuttongenerator.com - code start point*/

@@ -19,17 +19,14 @@ var populateRightBar = function(object){
 
   for(var property of object.sideBar){
     var hr = document.createElement("hr");
-    var link = document.createElement("a");
-    link.href = "http://www.google.com";
     var dt = document.createElement("dt");
     dt.innerText = property.label;
     var dd = document.createElement("dd");
     dd.innerText = property.value;
 
-    link.appendChild(dt);
-    link.appendChild(dd);
     dl2.appendChild(hr);
-    dl2.appendChild(link);
+    dl2.appendChild(dt);
+    dl2.appendChild(dd);
 
   }
 
@@ -47,7 +44,6 @@ var populateInfoBox = function(object){
   var sectionDiv = document.createElement("section");
   sectionDiv.id = "info-box";
   addBottomDivClass(sectionDiv);
-
 
   for(var property of object.description){
     var div = document.createElement("div");

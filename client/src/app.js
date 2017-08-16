@@ -23,24 +23,72 @@ var requestComplete = function() {
   var jsonString = this.responseText;
   solarSystem = JSON.parse(jsonString);
   populateScreen(solarSystem.details[0]);
-  console.log(solarSystem);
-  // var canvas = document.querySelector('#canvas');
-  // console.log('this is the canvas:', canvas);
   drawCanvas = new DrawCanvas(canvasHandler, canvas, solarSystem);
 }
 
-var manageBackgroundCanvas = function(){
-  var resizeCanvas = function() {
-    canvasTwo.width = window.innerWidth;
-    canvasTwo.height = window.innerHeight;
+// taken from http://codentronix.com/2011/07/22/html5-canvas-3d-starfield/ - start point
+var starField = function(){
+  MAX_DEPTH = 40; // controls how far away are the stars created in space
+
+   var canvas, ctx;
+   var stars = new Array(200);
+
+    canvas = document.getElementById("star-field");
+    if( canvas && canvas.getContext ) {
+      ctx = canvas.getContext("2d");
+      initStars();
+      setInterval(loop,37); // sets the speed of looping
+     }
+
+  function randomRange(minVal,maxVal) {
+    return Math.floor(Math.random() * (maxVal - minVal -1)) + minVal;
   }
 
-  var canvasTwo = document.querySelector("#canvas-full");
-  window.addEventListener('resize', resizeCanvas);
-  resizeCanvas();
+  function initStars() {
+    for( var i = 0; i < stars.length; i++ ) {
+      stars[i] = {
+        x: randomRange(-30,30),
+        y: randomRange(-30,30),
+        z: randomRange(20,MAX_DEPTH)
+       }
+    }
+  }
+
+  function loop() {
+    var halfWidth  = canvas.width/5;
+    var halfHeight = canvas.height/5;
+
+    ctx.fillStyle = "rgb(0,0,0)";
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+
+    for( var i = 0; i < stars.length; i++ ) {
+      stars[i].z -= 0.2; // sets the speed of the stars
+
+      if( stars[i].z <= 0 ) {
+        stars[i].x = randomRange(-25,25);
+        stars[i].y = randomRange(-25,25);
+        stars[i].z = MAX_DEPTH;
+      }
+
+      var k  = 128.0 / stars[i].z;
+      var px = stars[i].x * k + halfWidth;
+      var py = stars[i].y * k + halfHeight;
+
+      if( px >= 0 && px <= 500 && py >= 0 && py <= 400 ) {
+        var size = 1; // size of the stars
+        var shade = parseInt((1 - stars[i].z / 128.0) * 255);
+        ctx.fillStyle = "rgb(" + shade + "," + shade + "," + shade + ")";
+        ctx.fillRect(px,py,size,size);
+      }
+    }
+  }
 }
+// taken from http://codentronix.com/2011/07/22/html5-canvas-3d-starfield/ - end point
 
 window.addEventListener('load', function() {
+
+  // starField();
+
   var storedFavourites = localStorage.getItem("favourites");
   if(!storedFavourites){
     var emptyArray = JSON.stringify([]);
@@ -86,7 +134,6 @@ window.addEventListener('load', function() {
     })
   }
 
-
   canvasHandler.onHover = function(square){
     if(square){
       hoverName.innerText = square.data.Name;
@@ -94,10 +141,6 @@ window.addEventListener('load', function() {
       hoverName.innerText = "Solar System";
     }
   }
-
-  manageBackgroundCanvas();
-
-
 })
 
 var manageMoveToLocation = function(square){
@@ -126,7 +169,7 @@ var populateFavourites = function(favourites) {
       var squares = canvasHandler.squares;
       for(var square of squares){
         if(square.data.Name === favourites[index].Name){
-          drawCanvas.moveToLocation(square);
+          manageMoveToLocation(square);
           break;
         }
       }
@@ -135,11 +178,6 @@ var populateFavourites = function(favourites) {
     ul.appendChild(li);
     newArray.push(li);
   });
-
-  for(var favourite of favourites){
-
-  }
-
 
   var box = document.querySelector("#left-side");
   box.appendChild(ul);

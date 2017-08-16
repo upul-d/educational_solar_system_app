@@ -25,6 +25,7 @@ Square.prototype.drawImg = function() {
   this.pic.src = this.img;
   this.pic.addEventListener("load", function() {
     this.context.drawImage(this.pic, this.x, this.y, this.width, this.height);
+    this.pic = null;
   }.bind(this))
 }
 
