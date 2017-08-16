@@ -1,6 +1,12 @@
 body {
   background-image: url("/../images/space_bckgrnd.jpg");
   margin: 0;
+  font-family: futura;
+}
+
+a {
+  color: white;
+  text-decoration: none;
 }
 
 #container {
@@ -44,18 +50,6 @@ nav img{
   padding: 5px 20px 5px 20px;
   background-color: rgba(0, 0, 175, 0.3);
 }
-
-/*canvas{
-  position: absolute;
-}
-
-#star-field{
-  z-index: 0;
-}
-
-#canvas{
-  z-index: 1;
-}*/
 
 .side {
   background-color: rgba(0, 0, 175, 0.3);
