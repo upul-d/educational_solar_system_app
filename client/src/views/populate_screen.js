@@ -77,7 +77,13 @@ var populateGallery = function(object) {
     image.src = property.lowRes;
     newGalleryDiv.appendChild(image);
   }
+
+  var spaceDiv = document.createElement('div')
+  spaceDiv.id = "space-div";
+  newGalleryDiv.appendChild(spaceDiv);
+
   infoContainer.appendChild(newGalleryDiv);
+
 }
 
 var populateFunFacts = function(object){

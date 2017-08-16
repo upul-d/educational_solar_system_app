@@ -145,6 +145,10 @@ nav img{
   z-index: -1;
 }
 
+#space-div{
+  height: 300px;
+}
+
 /*CSS code below acquired from www.bestcssbuttongenerator.com - code start point*/
 .myButton {
   -moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
