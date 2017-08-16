@@ -32,11 +32,4 @@ CanvasHandler.prototype.getSquareWithin = function(x,y){
   return null;
 }
 
-
-
-
-
-
-
-
 module.exports = CanvasHandler

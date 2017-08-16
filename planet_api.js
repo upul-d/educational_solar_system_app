@@ -77,7 +77,7 @@ solarSystem.details = [{
     },
   ],
 
-  "facts": ["fact 1", "fact 2", "fact 3"]
+  "facts": ["This is the sun", "fact 2", "fact 3"]
 
 }]
 

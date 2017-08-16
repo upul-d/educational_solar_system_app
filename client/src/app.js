@@ -23,23 +23,10 @@ var requestComplete = function() {
   var jsonString = this.responseText;
   solarSystem = JSON.parse(jsonString);
   populateScreen(solarSystem.details[0]);
-  console.log(solarSystem);
-  // var canvas = document.querySelector('#canvas');
-  // console.log('this is the canvas:', canvas);
   drawCanvas = new DrawCanvas(canvasHandler, canvas, solarSystem);
 }
 
-var manageBackgroundCanvas = function(){
-  var resizeCanvas = function() {
-    canvasTwo.width = window.innerWidth;
-    canvasTwo.height = window.innerHeight;
-  }
-
-  var canvasTwo = document.querySelector("#canvas-full");
-  window.addEventListener('resize', resizeCanvas);
-  resizeCanvas();
-}
-
+// taken from http://codentronix.com/2011/07/22/html5-canvas-3d-starfield/ - start point
 var starField = function(){
   MAX_DEPTH = 40; // controls how far away are the stars created in space
 
@@ -96,6 +83,7 @@ var starField = function(){
     }
   }
 }
+// taken from http://codentronix.com/2011/07/22/html5-canvas-3d-starfield/ - end point
 
 window.addEventListener('load', function() {
 
@@ -146,7 +134,6 @@ window.addEventListener('load', function() {
     })
   }
 
-
   canvasHandler.onHover = function(square){
     if(square){
       hoverName.innerText = square.data.Name;
@@ -154,10 +141,6 @@ window.addEventListener('load', function() {
       hoverName.innerText = "Solar System";
     }
   }
-
-  manageBackgroundCanvas();
-
-
 })
 
 var manageMoveToLocation = function(square){
@@ -186,7 +169,7 @@ var populateFavourites = function(favourites) {
       var squares = canvasHandler.squares;
       for(var square of squares){
         if(square.data.Name === favourites[index].Name){
-          drawCanvas.moveToLocation(square);
+          manageMoveToLocation(square);
           break;
         }
       }
@@ -195,11 +178,6 @@ var populateFavourites = function(favourites) {
     ul.appendChild(li);
     newArray.push(li);
   });
-
-  for(var favourite of favourites){
-
-  }
-
 
   var box = document.querySelector("#left-side");
   box.appendChild(ul);
