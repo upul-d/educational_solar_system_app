@@ -193,3 +193,13 @@ nav img{
   top:1px;
 }
 /*CSS code above acquired from www.bestcssbuttongenerator.com - code end point*/
+
+
+#deleteFavouritesButton {
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffc477), color-stop(1, #fb9e25));
+  background:-moz-linear-gradient(top, red 5%, #fb9e25 100%);
+  background:-webkit-linear-gradient(top, red 5%, #fb9e25 100%);
+  background:-o-linear-gradient(top, red 5%, #fb9e25 100%);
+  background:-ms-linear-gradient(top, red 5%, #fb9e25 100%);
+  background:linear-gradient(to bottom, red 5%, #fb9e25 100%);
+}
