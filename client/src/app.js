@@ -141,6 +141,13 @@ window.addEventListener('load', function() {
       hoverName.innerText = "Solar System";
     }
   }
+
+  var deleteButton = document.querySelector("#deleteFavouritesButton");
+  deleteButton.addEventListener("click", function() {
+    var emptyArray = JSON.stringify([]);
+    localStorage.setItem("favourites", emptyArray);
+    removeFavourites();
+  });
 })
 
 var manageMoveToLocation = function(square){
