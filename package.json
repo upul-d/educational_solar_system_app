@@ -22,9 +22,9 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "mongodb": "^2.2.31",
-    "webpack": "^3.5.3"
+    "webpack": "^4.23.1"
   },
   "devDependencies": {
-    "mocha": "^3.5.0"
+    "mocha": "^5.2.0"
   }
 }
